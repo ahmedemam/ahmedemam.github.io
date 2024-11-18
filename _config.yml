@@ -9,7 +9,7 @@ baseurl:             '/'
 
 # About/contact
 author:
-  name:              Ahmed Emam
+  name:              Alex Gil
   url:               https://github.com/ahmedemam
   email:             ahmedabdelazizemam@gmail.com
 
@@ -54,7 +54,7 @@ exclude:
 # (Used for local or custom-server deployments)
 # Uncomment the `theme` line if using the Ed. theme gem on your own computer or server.
 # See https://jekyllrb.com/docs/themes/
-theme: ed.
+theme: "ed."
 
 # Remote Theme
 # (Used only for GitHub deployments)
