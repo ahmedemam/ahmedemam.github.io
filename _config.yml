@@ -4,8 +4,8 @@
 title:               AE.
 tagline:             'Founder & Senior Software Development Engineer'
 description:         'Ahmed Emam - Son, Brother, Friend, Founder, Entrepreneur, and Senior Software Development Engineer.'
-url:                 'https://github.com/ahmedemam'
-baseurl:             '/ed'
+# url:                 'https://github.com/ahmedemam'
+# baseurl:             '/ed'
 
 # About/contact
 author:
@@ -18,6 +18,8 @@ author:
 sass:
   sass_dir: _sass
 
+baseurl: /PROJECT
+url: http://USERNAME.github.io
 
 # Permalinks
 permalink: pretty
