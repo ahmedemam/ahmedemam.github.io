@@ -1,11 +1,11 @@
 # Built with Jekyll 3.6.0
 
 # Setup
-title:               AE.
+title:               Ahmed Emam.
 tagline:             'Founder & Senior Software Development Engineer'
 description:         'Ahmed Emam - Son, Brother, Friend, Founder, Entrepreneur, and Senior Software Development Engineer.'
-url:                 'https://github.com/ahmedemam'
-baseurl:             '/ed'
+url:                 'https://ahmedemam.github.io'
+baseurl:             '/ae'
 
 # About/contact
 author:
