@@ -552,7 +552,25 @@ div.narrative,
 div.toc {
   margin-bottom: 4rem;
 }
+mark.black-mark {
+  background-color: #000;
+  color: #fff;
+}
 
+mark.red-mark {
+  background-color: #f00;
+  color: #fff;
+}
+
+mark.blue-mark {
+  background-color: #00f;
+  color: #fff;
+}
+
+mark.green-mark {
+  background-color: #0f0;
+  color: #fff;
+}
 
 /*
   Poem styles
