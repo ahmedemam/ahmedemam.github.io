@@ -2,8 +2,6 @@
 layout: page
 title: About
 ---
-**About Ahmed Emam**  
-
 I am Ahmed Emam, a **Software Engineer**, entrepreneur, and innovator committed to creating impactful solutions through technology and collaboration. With a strong foundation in software engineering, I’ve expanded my expertise into entrepreneurship and community development, striving to deliver meaningful value across diverse fields.  
 
 ### **Professional Journey**  
