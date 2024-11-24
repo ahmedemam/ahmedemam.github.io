@@ -552,24 +552,32 @@ div.narrative,
 div.toc {
   margin-bottom: 4rem;
 }
-mark.black-mark {
+span.black-mark {
   background-color: #000;
   color: #fff;
+  padding: 0.1rem 0.2rem;
+  margin: 0 0.1rem;
 }
 
-mark.red-mark {
-  background-color: #f00;
+span.red-mark {
+  background-color: rgb(179, 0, 0);
   color: #fff;
+  padding: 0.1rem 0.2rem;
+  margin: 0 0.1rem;
 }
 
-mark.blue-mark {
-  background-color: #00f;
+span.blue-mark {
+  background-color: rgb(0, 0, 134);
   color: #fff;
+  padding: 0.1rem 0.2rem;
+  margin: 0 0.1rem;
 }
 
-mark.green-mark {
-  background-color: #0f0;
+span.green-mark {
+  background-color: rgb(0, 114, 0);
   color: #fff;
+  padding: 0.1rem 0.2rem;
+  margin: 0 0.1rem;
 }
 
 /*
