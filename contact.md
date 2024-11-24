@@ -2,8 +2,6 @@
 layout: page
 title: Contact
 ---
-**Contact Ahmed Emam**  
-
 I’d love to hear from you! Whether you’re interested in collaborating, discussing an idea, or simply connecting, feel free to reach out using the details below.  
 
 ### **Get in Touch**  
