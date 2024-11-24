@@ -552,44 +552,33 @@ div.narrative,
 div.toc {
   margin-bottom: 4rem;
 }
-span.black-mark:hover {
-  background-color: #000;
-  color: #fff;
+
+span.mark {
   padding: 0.1rem 0.2rem;
   margin: 0 0.1rem;
   font-weight: bold;
   text-decoration: underline;
-  transition: background-color 0.3s ease;
+}
+
+span.mark:hover {
+  color: #fff;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+span.black-mark:hover {
+  background-color: #000;
 }
 
 span.red-mark:hover {
   background-color: rgb(214, 0, 0);
-  color: #fff;
-  padding: 0.1rem 0.2rem;
-  margin: 0 0.1rem;
-  font-weight: bold;
-  text-decoration: underline;
-  transition: background-color 0.3s ease;
 }
 
 span.blue-mark:hover {
   background-color: rgb(1, 1, 156);
-  color: #fff;
-  padding: 0.1rem 0.2rem;
-  margin: 0 0.1rem;
-  font-weight: bold;
-  text-decoration: underline;
-  transition: background-color 0.3s ease;
 }
 
 span.green-mark:hover {
   background-color: rgb(0, 155, 0);
-  color: #fff;
-  padding: 0.1rem 0.2rem;
-  margin: 0 0.1rem;
-  font-weight: bold;
-  text-decoration: underline;
-  transition: background-color 0.3s ease;
 }
 
 /*
