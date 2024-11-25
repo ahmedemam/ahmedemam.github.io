@@ -566,22 +566,35 @@ span.mark:hover {
   transition: background-color 0.5s ease;
   cursor: pointer;
 }
+span.black-mark {
+  color: #000;
+}
 span.black-mark:hover {
   background-color: #000;
 }
 
+span.red-mark {
+  color: #d60000;
+}
 span.red-mark:hover {
   background-color: rgb(214, 0, 0);
 }
+
 
 span.blue-mark:hover {
   background-color: rgb(1, 1, 156);
 }
 
+span.blue-mark {
+  color: #0000ff;
+}
 span.green-mark:hover {
   background-color: rgb(0, 155, 0);
 }
 
+span.green-mark {
+  color: #00ff00;
+}
 /*
   Poem styles
 
