@@ -6,7 +6,7 @@ tagline:             'Software Development Engineer, Entrepreneur & Founder'
 description:         'Ahmed Emam is an engineer, entrepreneur, and founder who thrives on helping people, embracing arts, driving innovation, and creating projects and opportunities that make an impact.'
 url:                 'http://ahmedemam.github.io'
 baseurl:             '/'
-logo:               '/assets/logo.webp'
+logo:               '/assets/logo.png'
 
 # About/contact
 author:
