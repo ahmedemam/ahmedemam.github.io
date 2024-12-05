@@ -131,11 +131,15 @@ Feel free to connect with me:
 - **GitHub**: [ahmedemam](https://github.com/ahmedemam)  
 - **LinkedIn**: [ahmedhardworker](https://www.linkedin.com/in/ahmedhardworker/)  
 - **Email**: [ahmedabdelazizemam@gmail.com](mailto:ahmedabdelazizemam@gmail.com)
+
+
 ---
+
 ## Download Resume
 [ahmed-abd-eleaziz-emam-resume.pdf][1]
 
 [1]:{{ site.url }}/downloads/ahmed-abd-elaziz-emam-resume.pdf
+
 ---
 
 Thank you for visiting my portfolio!
