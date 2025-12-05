@@ -134,11 +134,6 @@ Advancing global consumer health, safety, and nutrition through scientific model
 - Fostering community through networking events and workshops
 - Providing flexible office solutions and business services
 
-**Founder** | Non-Profit Technology Initiative
-- Bridging technology with Islamic community needs
-- Developing educational tools, community management solutions, and charity technology
-- Empowering communities through accessible, faith-aligned technology
-
 ---
 
 ## Education
