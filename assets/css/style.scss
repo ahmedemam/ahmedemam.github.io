@@ -21,11 +21,10 @@ $regular-font-size: 1.25em; /* 20px / 16px = 1.25em; support text resizing in al
   Make sure to leave color-scheme in `_config.yml` file empty for granular control
 */
 
-$text-color: #333;
-$heading-color: #1a202c;
-$link-color: #2563eb;
-$accent-color: #4a5568;
-$border-color: #e2e8f0;
+$text-color: #000;
+$heading-color: #000;
+$link-color: #000;
+$border-color: #000;
 
 @import "ed";
 @import "syntax";
@@ -54,30 +53,27 @@ body {
   text-align: center;
   margin: 0 0 2em 0;
   padding: 1em 0;
-  border-bottom: 2px solid $link-color;
+  border-bottom: 2px solid $border-color;
   font-size: 0.95em;
-  background: #f8f9fa;
+  font-weight: 600;
   
   a {
     color: $link-color;
-    text-decoration: none;
+    text-decoration: underline;
     margin: 0 0.8em;
-    font-weight: 500;
-    padding: 0.3em 0.5em;
-    border-radius: 4px;
-    transition: background 0.2s ease;
+    font-weight: 600;
     
     &:hover {
-      background: rgba(37, 99, 235, 0.1);
       text-decoration: none;
+      font-style: italic;
     }
   }
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 30px 40px;
   text-align: left;
 }
 
@@ -106,12 +102,13 @@ h2 {
   font-size: 1.3em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-bottom: 2px solid $link-color;
+  border-bottom: 2px solid $border-color;
   padding-bottom: 0.3em;
   margin-top: 1.5em;
   margin-bottom: 0.8em;
   text-align: left;
   color: $heading-color;
+  font-weight: 700;
 }
 
 h3 {
@@ -158,15 +155,40 @@ hr {
   margin: 0 auto;
 }
 
-/* Add color to links */
+/* Enhanced typography for links */
 a {
   color: $link-color;
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: 500;
   
   &:hover {
-    color: darken($link-color, 10%);
-    text-decoration: underline;
+    font-weight: 600;
+    font-style: italic;
   }
+}
+
+/* Enhanced typography */
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Company names and important terms */
+h3 {
+  font-weight: 700;
+  
+  a {
+    font-weight: 700;
+  }
+}
+
+h4 {
+  font-weight: 600;
+  font-style: italic;
 }
 
 /* Resume-style sections */
@@ -285,14 +307,14 @@ a {
       a {
         display: block;
         padding: 0.5em;
-        border-left: 3px solid $link-color;
-        text-decoration: none;
+        border-left: 3px solid $border-color;
+        text-decoration: underline;
         color: $heading-color;
-        transition: all 0.2s ease;
+        font-weight: 500;
         
         &:hover {
-          background: rgba(37, 99, 235, 0.05);
-          padding-left: 0.8em;
+          font-weight: 600;
+          font-style: italic;
           text-decoration: none;
         }
       }
