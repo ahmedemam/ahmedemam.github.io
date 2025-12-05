@@ -25,7 +25,6 @@ $text-color: #2d3748;
 $heading-color: #1a202c;
 $link-color: #2563eb;
 
-@use "sass:color";
 @import "ed";
 @import "syntax";
 
@@ -176,7 +175,7 @@ $link-color: #2563eb;
       transition: color 0.2s ease;
       
       &:hover {
-        color: color.adjust($link-color, $lightness: -10%);
+        color: darken($link-color, 10%);
         text-decoration: underline;
       }
     }
