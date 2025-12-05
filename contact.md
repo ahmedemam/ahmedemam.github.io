@@ -9,7 +9,7 @@ I'd love to hear from you! Whether you're interested in collaborating on a proje
 
 ---
 
-## 📧 Contact Information
+## Contact Information
 
 ### Direct Contact
 - **Email**: [ahmedabdelazizemam@gmail.com](mailto:ahmedabdelazizemam@gmail.com)
@@ -62,7 +62,7 @@ I typically respond to emails within **24-48 hours**. For urgent matters, please
 
 ---
 
-## 🌐 Availability
+## Availability
 
 - **Current Status**: Open to new opportunities and collaborations
 - **Remote Work**: Available for remote consulting and projects
@@ -71,7 +71,7 @@ I typically respond to emails within **24-48 hours**. For urgent matters, please
 
 ---
 
-## 📋 Quick Links
+## Quick Links
 
 - [View My Resume](/resume/) - Detailed professional experience and skills
 - [About Me](/about/) - Learn more about my background and journey
