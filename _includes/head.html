@@ -39,10 +39,28 @@
 {% if page.layout == "default" %}
   <meta property="og:description" content="{{ site.description }}">
   <meta property="og:type" content="website" />
+  <meta name="description" content="{{ site.description }}">
 {% else %}
-  <meta property="og:description" content="An Ed edition">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:type" content="article" />
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 {% endif %}
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="keywords" content="Ahmed Emam, Software Engineer, Full Stack Developer, Entrepreneur, Community Builder, React, Angular, Node.js, AWS, Docker, Jekyll, Portfolio">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title == 'Home' %}{{ site.title }}{% else %}{{ page.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.layout == 'default' %}{{ site.description }}{% else %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}{% endif %}">
+  <meta name="twitter:image" content="{{ directory_url }}/assets/open-graph-logo.png">
+  
+  <!-- LinkedIn -->
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="article:author" content="{{ site.author.name }}">
 
   <!-- CSS link -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
