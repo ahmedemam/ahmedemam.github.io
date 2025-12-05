@@ -44,7 +44,7 @@ html {
   padding: 8px 16px;
   text-decoration: none;
   z-index: 100;
-  font-weight: 600;
+  font-weight: 400;
   
   &:focus {
     top: 0;
@@ -77,14 +77,14 @@ body {
   margin: 0 0 0.8em 0;
   padding: 0.5em 0;
   font-size: 1.1em;
-  font-weight: 600;
+  font-weight: 400;
   transition: all 0.3s ease;
   
   a {
     color: $link-color;
     text-decoration: underline;
     margin: 0 0.8em;
-    font-weight: 600;
+    font-weight: 400;
     transition: opacity 0.3s ease;
     display: inline-block;
     
@@ -245,7 +245,7 @@ a:focus {
   h3 {
     margin-top: 0;
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: 400;
   }
   
   ul {
@@ -300,7 +300,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.6em;
   margin-bottom: 0.3em;
   line-height: 1.3;
-  font-weight: 600;
+  font-weight: 400;
   text-align: left;
   font-family: $heading-font;
   transition: all 0.3s ease;
@@ -382,12 +382,13 @@ hr {
 a {
   color: $link-color;
   text-decoration: underline;
-  font-weight: 500;
+  font-weight: 400;
   transition: opacity 0.3s ease;
   position: relative;
   
   &:hover {
     opacity: 0.7;
+    font-weight: 500;
   }
   
   &:focus {
@@ -398,7 +399,7 @@ a {
 
 /* Enhanced typography */
 strong {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 em {
@@ -492,14 +493,14 @@ h4 {
   padding: 0;
   animation: fadeInUp 0.6s ease-out;
   
-  h1 {
-    font-size: 2.2em;
-    font-weight: 600;
-    margin-bottom: 0.5em;
-    margin-top: 0;
-    font-family: $heading-font;
-    transition: all 0.3s ease;
-  }
+          h1 {
+            font-size: 2.2em;
+            font-weight: 400;
+            margin-bottom: 0.5em;
+            margin-top: 0;
+            font-family: $heading-font;
+            transition: all 0.3s ease;
+          }
   
   p {
     line-height: 1.6;
