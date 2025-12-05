@@ -31,8 +31,8 @@ $border-color: #000;
 
 /* Resume-style layout: tight spacing, long vertical format */
 body {
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 18px;
+  line-height: 1.6;
   text-align: left;
 }
 
@@ -54,7 +54,7 @@ body {
   margin: 0 0 2em 0;
   padding: 1em 0;
   border-bottom: 2px solid $border-color;
-  font-size: 0.95em;
+  font-size: 1.1em;
   font-weight: 600;
   
   a {
@@ -72,14 +72,15 @@ body {
 
 .container {
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
-  padding: 30px 40px;
+  padding: 40px 60px;
   text-align: left;
 }
 
 .content {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.6;
   max-width: 100%;
   text-align: left;
 }
@@ -94,12 +95,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 2.5em;
   margin-top: 0;
 }
 
 h2 {
-  font-size: 1.3em;
+  font-size: 1.8em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   border-bottom: 2px solid $border-color;
@@ -112,14 +113,14 @@ h2 {
 }
 
 h3 {
-  font-size: 1.1em;
+  font-size: 1.4em;
   margin-top: 1em;
   margin-bottom: 0.4em;
   text-align: left;
 }
 
 h4 {
-  font-size: 1em;
+  font-size: 1.2em;
   margin-top: 0.8em;
   margin-bottom: 0.3em;
   text-align: left;
@@ -428,14 +429,14 @@ section, article, .page {
   padding: 0;
 }
 
-/* Ensure layout is never full width */
+/* Ensure layout uses full width */
 .wrap {
   max-width: 100%;
 }
 
 .container {
   width: 100%;
-  max-width: 600px;
+  max-width: 1400px;
 }
 
 /* Resume-style responsive */
