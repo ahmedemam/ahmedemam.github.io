@@ -35,11 +35,11 @@
 
       <main class="container content" id="main">
         <nav class="site-nav">
-          <a href="{{ site.baseurl }}/" target="_blank" rel="noopener noreferrer">Home</a> | 
-          <a href="{{ site.baseurl }}/resume/" target="_blank" rel="noopener noreferrer">Resume</a> | 
-          <a href="{{ site.baseurl }}/about/" target="_blank" rel="noopener noreferrer">About</a> | 
-          <a href="{{ site.baseurl }}/projects/" target="_blank" rel="noopener noreferrer">Projects</a> | 
-          <a href="{{ site.baseurl }}/contact/" target="_blank" rel="noopener noreferrer">Contact</a>
+          <a href="{{ site.baseurl }}/">Home</a> | 
+          <a href="{{ site.baseurl }}/resume/">Resume</a> | 
+          <a href="{{ site.baseurl }}/about/">About</a> | 
+          <a href="{{ site.baseurl }}/projects/">Projects</a> | 
+          <a href="{{ site.baseurl }}/contact/">Contact</a>
         </nav>
         {{ content }}
       </main>
@@ -88,6 +88,181 @@
         })
 
       })(document);
+    </script>
+
+    <!-- AJAX Navigation for Internal Links -->
+    <script>
+      (function() {
+        // Get base URL
+        var baseUrl = '{{ site.baseurl }}' || '';
+        var siteUrl = '{{ site.url }}' || window.location.origin;
+        
+        // Function to check if link is external
+        function isExternalLink(url) {
+          if (!url || url === '#' || url.startsWith('mailto:') || url.startsWith('javascript:')) {
+            return false;
+          }
+          // External domains that should open in new tabs
+          var externalDomains = [
+            'cremeglobal.com',
+            'masteryhub-its.com',
+            'jsrspaces.com',
+            'wepray.us',
+            'itccglobal.org',
+            'linkedin.com',
+            'github.com',
+            'food.jumia.com.eg',
+            'cloudypedia.com',
+            'beyond-solution.com',
+            'orange.com'
+          ];
+          
+          // Check if URL contains any external domain
+          for (var i = 0; i < externalDomains.length; i++) {
+            if (url.indexOf(externalDomains[i]) !== -1) {
+              return true;
+            }
+          }
+          
+          // Check if it's an absolute URL to a different domain
+          if (url.startsWith('http://') || url.startsWith('https://')) {
+            try {
+              var linkHost = new URL(url).hostname;
+              var currentHost = window.location.hostname;
+              return linkHost !== currentHost && linkHost !== 'ahmedemam.github.io';
+            } catch(e) {
+              return true;
+            }
+          }
+          
+          return false;
+        }
+        
+        // Function to check if link is internal
+        function isInternalLink(url) {
+          if (!url || url === '#' || url.startsWith('mailto:') || url.startsWith('javascript:')) {
+            return false;
+          }
+          
+          // If it's an external link, it's not internal
+          if (isExternalLink(url)) {
+            return false;
+          }
+          
+          // Internal links: relative paths or same domain
+          if (url.startsWith('/') || url.startsWith('./') || url.startsWith('../')) {
+            return true;
+          }
+          
+          // Check if it's same domain
+          try {
+            var linkUrl = new URL(url, window.location.href);
+            return linkUrl.hostname === window.location.hostname || 
+                   linkUrl.hostname === 'ahmedemam.github.io';
+          } catch(e) {
+            // If URL parsing fails, assume it's relative/internal
+            return !url.startsWith('http://') && !url.startsWith('https://');
+          }
+        }
+        
+        // Function to load page content via AJAX
+        function loadPage(url) {
+          // Update URL without reload
+          if (window.history && window.history.pushState) {
+            window.history.pushState({path: url}, '', url);
+          }
+          
+          // Show loading state
+          var main = document.getElementById('main');
+          if (main) {
+            main.style.opacity = '0.5';
+            main.style.transition = 'opacity 0.3s ease';
+          }
+          
+          // Fetch the page
+          fetch(url)
+            .then(function(response) {
+              return response.text();
+            })
+            .then(function(html) {
+              // Parse the HTML
+              var parser = new DOMParser();
+              var doc = parser.parseFromString(html, 'text/html');
+              
+              // Extract the main content
+              var newMain = doc.getElementById('main');
+              if (newMain && main) {
+                // Update content
+                main.innerHTML = newMain.innerHTML;
+                
+                // Update page title
+                var newTitle = doc.querySelector('title');
+                if (newTitle) {
+                  document.title = newTitle.textContent;
+                }
+                
+                // Fade in
+                main.style.opacity = '1';
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+                // Re-initialize any scripts if needed
+                if (typeof window.umami !== 'undefined') {
+                  window.umami.trackView();
+                }
+              }
+            })
+            .catch(function(error) {
+              console.error('Error loading page:', error);
+              // Fallback to normal navigation
+              window.location.href = url;
+            });
+        }
+        
+        // Handle popstate (back/forward buttons)
+        window.addEventListener('popstate', function(event) {
+          if (event.state && event.state.path) {
+            loadPage(event.state.path);
+          } else {
+            window.location.reload();
+          }
+        });
+        
+        // Intercept link clicks
+        document.addEventListener('click', function(e) {
+          var link = e.target.closest('a');
+          if (!link) return;
+          
+          var href = link.getAttribute('href');
+          if (!href) return;
+          
+          // Skip if it has target="_blank" or is external
+          if (link.getAttribute('target') === '_blank' || isExternalLink(href)) {
+            return; // Let it open normally
+          }
+          
+          // Skip if it's a mailto or javascript link
+          if (href.startsWith('mailto:') || href.startsWith('javascript:')) {
+            return;
+          }
+          
+          // Check if it's an internal link
+          if (isInternalLink(href)) {
+            e.preventDefault();
+            
+            // Convert relative URL to absolute
+            var absoluteUrl = href;
+            if (href.startsWith('/')) {
+              absoluteUrl = window.location.origin + href;
+            } else if (!href.startsWith('http://') && !href.startsWith('https://')) {
+              absoluteUrl = new URL(href, window.location.href).href;
+            }
+            
+            loadPage(absoluteUrl);
+          }
+        });
+      })();
     </script>
 
 <!-- Facebook SDK for JavaScript -->
