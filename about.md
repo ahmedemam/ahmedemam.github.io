@@ -34,7 +34,7 @@ Founded MasteryHub ITS as a technology company focused on building products, emp
 - **Vision**: Build a company known for strong engineering culture, practical training, and meaningful products that solve real problems
 - **Mission**: Develop high-quality software, grow future engineers through structured learning, and create an ecosystem where training, community, and product building work together under one roof
 
-### Senior Software Development Engineer @ [Creme Global](https://www.cremeglobal.com/)
+### Senior Software Development Engineer @ [Creme Global](https://www.cremeglobal.com/){:target="_blank" rel="noopener noreferrer"}
 *May 2022 – Present (Remote)*
 
 Advancing global consumer health, safety, and nutrition through scientific modelling across the global food, cosmetics, and agriculture markets.
@@ -50,24 +50,24 @@ Advancing global consumer health, safety, and nutrition through scientific model
 
 ### Previous Roles
 
-**Senior Software Development Engineer @ [Jumia Food](https://food.jumia.com.eg/)** (April 2022 – October 2022)
+**Senior Software Development Engineer @ [Jumia Food](https://food.jumia.com.eg/){:target="_blank" rel="noopener noreferrer"}** (April 2022 – October 2022)
 - Jumia is a leading Pan-African technology company focused on e-commerce, logistics, and digital payments
 - Developed and maintained the **Jumia Food application**, ensuring stability, performance, and the rollout of new features across **10+ countries**
 - Improved core services and backend components to support large-scale food delivery operations and high-traffic workflows
 - **Tech Stack**: Symfony Framework, Zend Framework, Laravel Framework, Node.js, GoLang
 
-**Senior Software Development Engineer @ [Cloudypedia](https://www.cloudypedia.com/)** (June 2021 – April 2022)
+**Senior Software Development Engineer @ [Cloudypedia](https://www.cloudypedia.com/){:target="_blank" rel="noopener noreferrer"}** (June 2021 – April 2022)
 - Cloudypedia specializes in modernizing infrastructure and transforming how teams collaborate and manage digital services
 - **HEAM Project for Lean Business Service**: Built and maintained a CMS application that allows customers to consume APIs, track usage, and manage their own API consumption across different services
 - Implemented and integrated backend and platform features using **Symfony PHP**, **Apigee GCP**, **Apigee Monetization**, and **Drupal CMS**
 
-**Software Development Engineer @ [Beyond-Solution LLC](https://beyond-solution.com/)** (December 2020 – July 2021)
+**Software Development Engineer @ [Beyond-Solution LLC](https://beyond-solution.com/){:target="_blank" rel="noopener noreferrer"}** (December 2020 – July 2021)
 - A startup building a one-stop platform for medical insurance services for companies and individuals
 - **Data-Population Project**: Developed a web application enabling business agents to manage and process medical insurance data for **50,000+ users**
 - Contributed to building the company-wide **Single Sign-On (SSO)** layer, improving authentication and access control across all internal applications
 - **Tech Stack**: React, TypeScript, NestJS, Prisma ORM, AWS ECS, Keycloak, Kong API Gateway, Docker, Docker Compose
 
-**Software Development Engineer @ [Orange Innovation Egypt](https://www.orange.com/)** (July 2019 – December 2020)
+**Software Development Engineer @ [Orange Innovation Egypt](https://www.orange.com/){:target="_blank" rel="noopener noreferrer"}** (July 2019 – December 2020)
 
 **CIB Egypt – Board Member Meeting Application:**
 - Built a secure platform enabling CIB board members to manage meetings efficiently
