@@ -320,7 +320,7 @@ h2 {
   margin-bottom: 0.4em;
   text-align: left;
   color: $heading-color;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h3 {
@@ -409,15 +409,15 @@ em {
 
 /* Company names and important terms */
 h3 {
-  font-weight: 700;
+  font-weight: 500;
   
   a {
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
 h4 {
-  font-weight: 600;
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -443,7 +443,7 @@ h4 {
       h3 {
         font-size: 1em;
         margin-bottom: 0.3em;
-        font-weight: 600;
+        font-weight: 400;
       }
       
       p {
@@ -533,7 +533,7 @@ h4 {
 
 /* Professional mark styling - removed colored marks */
 .mark {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* Resume-style project list */
@@ -592,7 +592,7 @@ h4 {
     font-size: 1em;
     margin-bottom: 0.5em;
     color: $heading-color;
-    font-weight: 600;
+    font-weight: 400;
   }
 }
 
@@ -604,7 +604,7 @@ h4 {
   
   h1 {
     font-size: 2.2em;
-    font-weight: 600;
+    font-weight: 400;
     margin: 0 0 0.3em 0;
     padding: 0;
   }
