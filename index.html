@@ -3,25 +3,54 @@ layout: default
 title: "Ahmed Emam."
 ---
 <div class="introduction">
-  <h1>hi.</h1>
+  <h1>Hello, I'm Ahmed Emam</h1>
 
 <p>
-  I’m <span class="mark black-mark">Ahmed Emam</span>, a passionate entrepreneur and community builder who thrives on innovation, 
-  creativity, and making a difference. From founding <span class="mark red-mark">MasteryHub ITS</span> and <span class="mark blue-mark">JSR.Spaces</span>, to launching impactful initiatives like the 
-<span class="mark green-mark">Islamic Technology Community Center (ITCC)</span>, and more.
-  my journey is all about creating opportunities, fostering connections, and driving growth.
-  Here, you’ll find insights into my projects, my love for arts and technology, and my commitment to empowering individuals and communities.
-  Join me in building solutions that inspire, educate, and connect. Let’s innovate together!
+  I'm a <span class="mark black-mark">Senior Software Development Engineer</span>, <span class="mark red-mark">Entrepreneur</span>, and <span class="mark blue-mark">Community Builder</span> with over 6 years of experience in building scalable software solutions. 
+  I specialize in full-stack development, cloud computing, and DevOps, with a passion for creating impactful technology solutions.
+</p>
+
+<p>
+  Beyond engineering, I'm the founder of <span class="mark red-mark">MasteryHub ITS</span> (innovative software solutions), <span class="mark blue-mark">JSR Spaces</span> (collaborative coworking environments), 
+  and the <span class="mark green-mark">Islamic Technology Community Center (ITCC)</span> — initiatives that combine technology with community impact.
+</p>
+
+<p>
+  My work spans from building data analytics dashboards for global clients like <strong>Apple</strong> and <strong>WSRO</strong>, to developing applications serving <strong>50K+ users</strong>, 
+  and creating platforms that empower communities through technology. I thrive on innovation, collaboration, and making a meaningful difference.
 </p>
 </div>
 
 <hr>
 
+<div class="skills-showcase">
+  <h2>Core Expertise</h2>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3>Languages & Frameworks</h3>
+      <p>JavaScript, TypeScript, Java, PHP (Laravel, Symfony), Ruby on Rails, Python (Django), GoLang, NodeJS</p>
+    </div>
+    <div class="skill-category">
+      <h3>Frontend</h3>
+      <p>React, Angular, Vue.js, Ionic Framework</p>
+    </div>
+    <div class="skill-category">
+      <h3>Backend & Cloud</h3>
+      <p>NestJS, AWS, Docker, Jenkins, Linux Administration, Microservices Architecture</p>
+    </div>
+    <div class="skill-category">
+      <h3>Databases & Tools</h3>
+      <p>SQL, NoSQL (MongoDB), Git, Prisma ORM, Apigee, Agile/Scrum</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+
 <div class="toc">
-  <h2>projects & interests</h2>
+  <h2>Featured Projects & Initiatives</h2>
   <ul class="texts">
   {% for item in site.texts %}
-
     <li class="text-title">
       <a href="{{ site.baseurl }}{{ item.url }}">
         {{ item.title }}
@@ -29,4 +58,15 @@ title: "Ahmed Emam."
     </li>
   {% endfor %}
   </ul>
+</div>
+
+<hr>
+
+<div class="cta-section">
+  <h2>Let's Connect</h2>
+  <p>Interested in collaboration, discussing opportunities, or learning more about my work?</p>
+  <p>
+    <a href="{{ site.baseurl }}/contact/" class="cta-button">Get in Touch</a>
+    <a href="{{ site.baseurl }}/resume/" class="cta-button">View Resume</a>
+  </p>
 </div>

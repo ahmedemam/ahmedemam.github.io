@@ -2,7 +2,7 @@
 layout: poem
 title: MasteryHub ITS
 author: Ahmed Emam
-editor: Ahned Emam
+editor: Ahmed Emam
 source: Ahmed Emam
 ---
 ### **About MasteryHub ITS**  

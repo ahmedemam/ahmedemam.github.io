@@ -3,14 +3,14 @@
 # Setup
 title:               Ahmed Emam.
 tagline:             'Software Development Engineer, Entrepreneur & Founder'
-description:         'Ahmed Emam is an engineer, entrepreneur, and founder who thrives on helping people, embracing arts, driving innovation, and creating projects and opportunities that make an impact.'
-url:                 'http://ahmedemam.github.io'
+description:         'Ahmed Emam is a Senior Software Development Engineer, entrepreneur, and community builder with 6+ years of experience. Founder of MasteryHub ITS, JSR Spaces, and ITCC. Specializing in full-stack development, cloud computing, and creating impactful technology solutions.'
+url:                 'https://ahmedemam.github.io'
 baseurl:             '/'
 logo:               '/assets/logo.png'
 
 # About/contact
 author:
-  name:              Alex Gil
+  name:              Ahmed Emam
   url:               https://github.com/ahmedemam
   email:             ahmedabdelazizemam@gmail.com
 
