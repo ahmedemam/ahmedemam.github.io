@@ -349,10 +349,10 @@ h4 {
 
 /* Resume-style project list */
 .toc {
-  margin: 1em 0;
+  margin: 0.5em 0;
   
   h2 {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.4em;
   }
   
   .texts {
@@ -360,12 +360,12 @@ h4 {
     padding: 0;
     
     .text-title {
-      margin: 0.5em 0;
+      margin: 0.2em 0;
       transition: all 0.3s ease;
       
       a {
         display: block;
-        padding: 0.5em;
+        padding: 0.3em;
         text-decoration: underline;
         color: $heading-color;
         font-weight: 500;
@@ -376,7 +376,7 @@ h4 {
           font-style: italic;
           text-decoration: none;
           transform: translateX(5px);
-          padding-left: 0.8em;
+          padding-left: 0.5em;
         }
       }
     }
