@@ -10,7 +10,7 @@ sitemap: false
 */
 
 /* Fonts */
-$main-font: "Bree Serif", serif;
+$main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $heading-font: "Bree Serif", serif;
 $regular-font-size: 1.25em; /* 20px / 16px = 1.25em; support text resizing in all browsers */
 
@@ -91,6 +91,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;
   font-weight: 600;
   text-align: left;
+  font-family: $heading-font;
 }
 
 h1 {
@@ -266,6 +267,7 @@ h4 {
     font-weight: 600;
     margin-bottom: 0.5em;
     margin-top: 0;
+    font-family: $heading-font;
   }
   
   p {
