@@ -555,13 +555,14 @@ h4 {
       a {
         display: block;
         padding: 0.3em;
-        text-decoration: underline;
+        text-decoration: none;
         color: $heading-color;
         font-weight: 500;
         transition: opacity 0.3s ease;
         
         &:hover {
           opacity: 0.7;
+          text-decoration: underline;
         }
       }
     }
