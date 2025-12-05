@@ -10,7 +10,7 @@ Welcome to my technical portfolio! Here, you'll find a curated selection of my o
 
 ---
 
-## 🌟 Featured Projects
+## Featured Projects
 
 ### 1. **[Database Engine Shell](https://github.com/ahmedemam/Database-Engine-Shell)**  
 A custom-built database engine implemented entirely in **Shell scripting**. This project demonstrates deep understanding of low-level database management, data structures, and scripting fundamentals.  
@@ -68,7 +68,7 @@ A curated collection of algorithmic solutions and data structure implementations
 
 ---
 
-## 💡 Additional Notable Projects
+## Additional Notable Projects
 
 ### **[Clean Code Summary](https://github.com/ahmedemam/Clean-Code-Summery)**  
 A comprehensive guide to **clean code** principles and best practices, with practical examples to help developers write more maintainable and readable code.  
@@ -118,7 +118,7 @@ A full-stack reading management application built with the **MERN stack** (Mongo
 
 ---
 
-## 🔗 Connect & Collaborate
+## Connect & Collaborate
 
 I'm always interested in collaborating on interesting projects, contributing to open-source initiatives, or discussing technical challenges.
 

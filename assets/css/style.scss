@@ -21,9 +21,9 @@ $regular-font-size: 1.25em; /* 20px / 16px = 1.25em; support text resizing in al
   Make sure to leave color-scheme in `_config.yml` file empty for granular control
 */
 
-$text-color: #2d3748;
-$heading-color: #1a202c;
-$link-color: #2563eb;
+$text-color: #333;
+$heading-color: #000;
+$link-color: #000;
 
 @import "ed";
 @import "syntax";
@@ -47,15 +47,11 @@ $link-color: #2563eb;
     margin-top: 1.5em;
     
     .skill-category {
-      background: #f7fafc;
       padding: 1.5em;
-      border-radius: 8px;
-      border-left: 4px solid $link-color;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid #ddd;
       
       &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-color: #999;
       }
       
       h3 {
@@ -79,17 +75,14 @@ $link-color: #2563eb;
   text-align: center;
   margin: 3em 0;
   padding: 2em;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 12px;
-  color: white;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   
   h2 {
-    color: white;
     margin-bottom: 0.5em;
   }
   
   p {
-    color: rgba(255, 255, 255, 0.95);
     margin: 0.5em 0;
   }
   
@@ -97,16 +90,12 @@ $link-color: #2563eb;
     display: inline-block;
     margin: 0.5em 1em;
     padding: 0.75em 2em;
-    background: white;
-    color: #667eea;
+    border: 1px solid #000;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
     
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      background: #000;
+      color: #fff;
       text-decoration: none;
     }
   }
@@ -127,10 +116,8 @@ $link-color: #2563eb;
   }
 }
 
-/* Professional mark styling */
+/* Professional mark styling - removed colored marks */
 .mark {
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
   font-weight: 600;
 }
 
@@ -146,18 +133,12 @@ $link-color: #2563eb;
       a {
         display: block;
         padding: 1em;
-        background: #f7fafc;
-        border-left: 4px solid $link-color;
-        border-radius: 6px;
+        border-bottom: 1px solid #ddd;
         text-decoration: none;
         color: $heading-color;
-        transition: all 0.2s ease;
-        font-weight: 500;
         
         &:hover {
-          background: #edf2f7;
-          transform: translateX(4px);
-          text-decoration: none;
+          text-decoration: underline;
         }
       }
     }
@@ -172,10 +153,8 @@ $link-color: #2563eb;
     a {
       color: $link-color;
       text-decoration: none;
-      transition: color 0.2s ease;
       
       &:hover {
-        color: darken($link-color, 10%);
         text-decoration: underline;
       }
     }
