@@ -76,16 +76,18 @@ body {
   font-weight: 400;
   transition: all 0.3s ease;
   border-bottom: 1px solid $border-color;
+  font-family: $heading-font;
   
   a {
     color: $text-color;
     text-decoration: none;
     margin: 0 1em;
-    font-weight: 500;
+    font-weight: 400;
     transition: all 0.3s ease;
     display: inline-block;
     padding: 0.3em 0.5em;
     border-radius: 4px;
+    font-family: $heading-font;
     
     &:hover {
       color: $link-color;
