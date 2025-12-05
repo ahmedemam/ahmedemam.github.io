@@ -70,7 +70,7 @@ Plus several internal tools for operations, automation, and productivity.
 
 ---
 
-### **Senior Software Development Engineer @ Creme Global**
+### **Senior Software Development Engineer @ [Creme Global](https://www.cremeglobal.com/)**
 
 *May 2022 – Present | Remote*
 
@@ -89,7 +89,7 @@ Advancing global consumer health, safety, and nutrition through scientific model
 
 ---
 
-### **Senior Software Development Engineer @ Jumia Food**
+### **Senior Software Development Engineer @ [Jumia Food](https://food.jumia.com.eg/)**
 
 *April 2022 – October 2022 | Remote/Onsite | Cairo, Egypt*
 
@@ -103,7 +103,7 @@ Jumia is a leading Pan-African technology company focused on e-commerce, logisti
 
 ---
 
-### **Senior Software Development Engineer @ Cloudypedia**
+### **Senior Software Development Engineer @ [Cloudypedia](https://www.cloudypedia.com/)**
 
 *June 2021 – April 2022 | Remote/Onsite | Cairo, Egypt | Dubai, UAE | Riyadh, KSA*
 
@@ -116,7 +116,7 @@ Cloudypedia specializes in modernizing infrastructure and transforming how teams
 
 ---
 
-### **Software Development Engineer @ Beyond-Solution LLC**
+### **Software Development Engineer @ [Beyond-Solution LLC](https://beyond-solution.com/)**
 
 *December 2020 – July 2021 | Remote/Onsite | Cairo, Egypt*
 
@@ -131,7 +131,7 @@ A startup building a one-stop platform for medical insurance services for compan
 
 ---
 
-### **Software Development Engineer @ Orange Innovation Egypt**
+### **Software Development Engineer @ [Orange Innovation Egypt](https://www.orange.com/)**
 
 *July 2019 – December 2020 | Remote/Onsite | Giza, Egypt*
 
