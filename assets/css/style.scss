@@ -505,36 +505,39 @@ h4 {
 /* Homepage introduction */
 .introduction {
   text-align: center;
-  margin: 0 0 0.8em 0;
-  padding: 0;
+  margin: 0 0 3em 0;
+  padding: 2em 0;
   animation: fadeInUp 0.6s ease-out;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 12px;
+  border: 1px solid $border-color;
   
   h1 {
-    font-size: 2.2em;
+    font-size: 2.8em;
     font-weight: 400;
     margin-bottom: 0.5em;
     margin-top: 0;
     font-family: $heading-font;
     transition: all 0.3s ease;
+    color: $heading-color;
   }
   
   p {
     font-family: $main-font;
-  }
-  
-  p {
-    line-height: 1.6;
-    margin: 0.5em 0;
+    line-height: 1.8;
+    margin: 0.8em 0;
     transition: all 0.3s ease;
+    color: $text-color;
     
     a {
       color: $link-color;
       text-decoration: none;
-      transition: opacity 0.3s ease;
+      transition: all 0.3s ease;
+      font-weight: 500;
       
       &:hover {
         text-decoration: underline;
-        opacity: 0.7;
+        color: darken($link-color, 10%);
       }
     }
   }
