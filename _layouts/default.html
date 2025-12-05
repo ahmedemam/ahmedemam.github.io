@@ -5,6 +5,9 @@
 
   <body class="theme-base-{{site.color-scheme}}">
 
+    <!-- Skip to content link for accessibility -->
+    <a href="#main" class="skip-to-content">Skip to main content</a>
+
     <!-- This if statement decides which sidebar to use -->
     {% if page.toc %}
     {% include sidebar-toc.html %}
@@ -27,22 +30,31 @@
           <h3 class="masthead-title">
             <!-- logo -->
               <img src="{{ site.logo }}" alt="{{ site.title }}" width="200px" height="200px" style="margin: 0 auto">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title | newline_to_br }}</a>
+            <a href="{{ site.baseurl }}/" title="Home" aria-label="Home">{{ site.title | newline_to_br }}</a>
             <br><small>{{ site.tagline }}</small>
           </h3>
         </div>
       </header>
 
-      <main class="container content" id="main">
-        <nav class="site-nav">
-          <a href="{{ site.baseurl }}/">Home</a> | 
-          <a href="{{ site.baseurl }}/resume/">Resume</a> | 
-          <a href="{{ site.baseurl }}/about/">About</a> | 
-          <a href="{{ site.baseurl }}/projects/">Projects</a> | 
-          <a href="{{ site.baseurl }}/contact/">Contact</a>
+      <main class="container content" id="main" role="main">
+        <nav class="site-nav" role="navigation" aria-label="Main navigation">
+          <a href="{{ site.baseurl }}/" aria-label="Home page">Home</a> | 
+          <a href="{{ site.baseurl }}/resume/" aria-label="Resume page">Resume</a> | 
+          <a href="{{ site.baseurl }}/about/" aria-label="About page">About</a> | 
+          <a href="{{ site.baseurl }}/projects/" aria-label="Projects page">Projects</a> | 
+          <a href="{{ site.baseurl }}/contact/" aria-label="Contact page">Contact</a> | 
+          <a href="{{ site.baseurl }}/search/" aria-label="Search page">Search</a>
         </nav>
+        <div id="loading-indicator" class="loading-indicator" style="display: none;">
+          <div class="loading-spinner"></div>
+        </div>
         {{ content }}
       </main>
+      
+      <!-- Scroll to top button -->
+      <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" style="display: none;">
+        ↑
+      </button>
     </div>
 
     <script>
@@ -172,6 +184,12 @@
             window.history.pushState({path: url}, '', url);
           }
           
+          // Show loading indicator
+          var loadingIndicator = document.getElementById('loading-indicator');
+          if (loadingIndicator) {
+            loadingIndicator.style.display = 'block';
+          }
+          
           // Show loading state
           var main = document.getElementById('main');
           if (main) {
@@ -201,6 +219,11 @@
                   document.title = newTitle.textContent;
                 }
                 
+                // Hide loading indicator
+                if (loadingIndicator) {
+                  loadingIndicator.style.display = 'none';
+                }
+                
                 // Fade in
                 main.style.opacity = '1';
                 
@@ -215,6 +238,10 @@
             })
             .catch(function(error) {
               console.error('Error loading page:', error);
+              // Hide loading indicator
+              if (loadingIndicator) {
+                loadingIndicator.style.display = 'none';
+              }
               // Fallback to normal navigation
               window.location.href = url;
             });
@@ -263,6 +290,50 @@
           }
         });
       })();
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <script>
+      (function() {
+        var scrollButton = document.getElementById('scroll-to-top');
+        if (!scrollButton) return;
+        
+        // Show/hide button based on scroll position
+        function toggleScrollButton() {
+          if (window.pageYOffset > 300) {
+            scrollButton.style.display = 'block';
+          } else {
+            scrollButton.style.display = 'none';
+          }
+        }
+        
+        // Scroll to top on click
+        scrollButton.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+        
+        // Show/hide on scroll
+        window.addEventListener('scroll', toggleScrollButton);
+        toggleScrollButton(); // Check initial state
+      })();
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('{{ site.baseurl }}/sw.js')
+            .then(function(registration) {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch(function(err) {
+              console.log('ServiceWorker registration failed');
+            });
+        });
+      }
     </script>
 
 <!-- Facebook SDK for JavaScript -->

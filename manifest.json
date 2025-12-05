@@ -1,0 +1,23 @@
+{
+  "name": "Ahmed Emam - Portfolio",
+  "short_name": "Ahmed Emam",
+  "description": "Founder & Staff Software Development Engineer, Entrepreneur",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/apple-touch-icon-precomposed.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
+
