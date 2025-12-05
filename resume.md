@@ -70,7 +70,7 @@ Plus several internal tools for operations, automation, and productivity.
 
 ---
 
-### **Senior Software Development Engineer @ [Creme Global](https://www.cremeglobal.com/)**
+### **Senior Software Development Engineer @ [Creme Global](https://www.cremeglobal.com/){:target="_blank" rel="noopener noreferrer"}**
 
 *May 2022 – Present | Remote*
 
@@ -85,11 +85,11 @@ Advancing global consumer health, safety, and nutrition through scientific model
 
 **Tech Stack**: React, AngularJS, Angular, TypeScript, **Qlik Sense**, **Mashups**, Nebula.js, Enigma.js, plus various internal services and frameworks
 
-[Visit Creme Global](https://www.cremeglobal.com/)
+[Visit Creme Global](https://www.cremeglobal.com/){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
-### **Senior Software Development Engineer @ [Jumia Food](https://food.jumia.com.eg/)**
+### **Senior Software Development Engineer @ [Jumia Food](https://food.jumia.com.eg/){:target="_blank" rel="noopener noreferrer"}**
 
 *April 2022 – October 2022 | Remote/Onsite | Cairo, Egypt*
 
@@ -99,11 +99,11 @@ Jumia is a leading Pan-African technology company focused on e-commerce, logisti
 - Improved core services and backend components to support large-scale food delivery operations and high-traffic workflows
 - Worked across multiple technologies including **Symfony Framework**, **Zend Framework**, **Laravel Framework**, **Node.js**, and **GoLang**
 
-[Visit Jumia Food](https://food.jumia.com.eg/)
+[Visit Jumia Food](https://food.jumia.com.eg/){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
-### **Senior Software Development Engineer @ [Cloudypedia](https://www.cloudypedia.com/)**
+### **Senior Software Development Engineer @ [Cloudypedia](https://www.cloudypedia.com/){:target="_blank" rel="noopener noreferrer"}**
 
 *June 2021 – April 2022 | Remote/Onsite | Cairo, Egypt | Dubai, UAE | Riyadh, KSA*
 
@@ -112,11 +112,11 @@ Cloudypedia specializes in modernizing infrastructure and transforming how teams
 - **HEAM Project for Lean Business Service**: Built and maintained a CMS application that allows customers to consume APIs, track usage, and manage their own API consumption across different services
 - Implemented and integrated backend and platform features using **Symfony PHP**, **Apigee GCP**, **Apigee Monetization**, and **Drupal CMS**
 
-[Visit Cloudypedia](https://www.cloudypedia.com/)
+[Visit Cloudypedia](https://www.cloudypedia.com/){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
-### **Software Development Engineer @ [Beyond-Solution LLC](https://beyond-solution.com/)**
+### **Software Development Engineer @ [Beyond-Solution LLC](https://beyond-solution.com/){:target="_blank" rel="noopener noreferrer"}**
 
 *December 2020 – July 2021 | Remote/Onsite | Cairo, Egypt*
 
@@ -127,11 +127,11 @@ A startup building a one-stop platform for medical insurance services for compan
 - Contributed to building the company-wide **Single Sign-On (SSO)** layer, improving authentication and access control across all internal applications
 - **Tech**: Keycloak, Kong API Gateway, Docker, Docker Compose
 
-[Visit Beyond Solution](https://beyond-solution.com/)
+[Visit Beyond Solution](https://beyond-solution.com/){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
-### **Software Development Engineer @ [Orange Innovation Egypt](https://www.orange.com/)**
+### **Software Development Engineer @ [Orange Innovation Egypt](https://www.orange.com/){:target="_blank" rel="noopener noreferrer"}**
 
 *July 2019 – December 2020 | Remote/Onsite | Giza, Egypt*
 
@@ -160,7 +160,7 @@ An integration and automation project evaluating multiple platforms and assembli
   - **Monitoring & logging** (ELK Stack)
 - Contributed using tools such as **Gradle**, **Zoho**, **GitLab**, and others
 
-[Visit Orange](https://www.orange.com/)
+[Visit Orange](https://www.orange.com/){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
