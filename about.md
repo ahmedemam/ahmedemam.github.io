@@ -24,9 +24,9 @@ Founded MasteryHub ITS as a technology company focused on building products, emp
 - Established a clear engineering culture with principles around quality, speed, ownership, and teamwork
 
 **Product Leadership & Delivery:**
-- **WePray**: A communal prayer mobile app
-- **SpeakOut Platform**: A mental-health and recovery support platform
-- **Squad X Camp**: A training ecosystem for students and graduates
+- **[WePray](https://wepray.us/)**: A communal prayer mobile app
+- **[SpeakOut Platform](https://speakout.icu/)**: A mental-health and recovery support platform
+- **[Squad X Camp](https://squadxcamp.com/)**: A training ecosystem for students and graduates
 - **JSR Spaces**: Coworking spaces in Cairo, Egypt (co-founder)
 - Plus several internal tools for operations, automation, and productivity
 
@@ -134,7 +134,6 @@ Advancing global consumer health, safety, and nutrition through scientific model
 - Fostering community through networking events and workshops
 - Providing flexible office solutions and business services
 
-### Islamic Technology Community Center (ITCC)
 **Founder** | Non-Profit Technology Initiative
 - Bridging technology with Islamic community needs
 - Developing educational tools, community management solutions, and charity technology

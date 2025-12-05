@@ -56,10 +56,10 @@ Founded MasteryHub ITS as a technology company focused on building products, emp
 
 Led the development and launch of multiple platforms, including:
 
-1. **WePray**: A communal prayer mobile app
-2. **SpeakOut Platform**: A mental-health and recovery support platform
-3. **Squad X Camp**: A training ecosystem for students and graduates
-4. **JSR Spaces**: Coworking spaces in Cairo, Egypt (co-founder and running that business)
+1. **[WePray](https://wepray.us/)**: A communal prayer mobile app
+2. **[SpeakOut Platform](https://speakout.icu/)**: A mental-health and recovery support platform
+3. **[Squad X Camp](https://squadxcamp.com/)**: A training ecosystem for students and graduates
+4. **[JSR Spaces](https://jsrspaces.com/)**: Coworking spaces in Cairo, Egypt (co-founder and running that business)
 
 Plus several internal tools for operations, automation, and productivity.
 
