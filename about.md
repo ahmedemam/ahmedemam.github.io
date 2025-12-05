@@ -39,7 +39,7 @@ Founded MasteryHub ITS as a technology company focused on building products, emp
 
 Advancing global consumer health, safety, and nutrition through scientific modelling across the global food, cosmetics, and agriculture markets.
 
-- Delivered advanced **Data Analytics & Visualization dashboards** for major global clients including **WSRO**, **REJV (CARES NG DB)**, **RIFM**, **Apple**, and **PepsiCo**, supporting global market decision-making and regulatory insights
+- Delivered advanced **Data Analytics & Visualization dashboards** for major global clients including **WSRO**, **REJV (CARES NG DB)**, **RIFM**, **Apple**, and **PepsiCo** at **Creme Global**, supporting global market decision-making and regulatory insights
 - Maintained and modernized a broad suite of legacy and current services, improving performance, reliability, and long-term stability across multiple scientific and data-driven applications
 - Built and deployed multiple new services across frontend, backend, and data engineering, supporting modelling workflows, data pipelines, analytics, and scientific tools used worldwide
 - Led FE/BE/DE project streams, influencing architecture, engineering standards, delivery processes, and cross-team technical direction
