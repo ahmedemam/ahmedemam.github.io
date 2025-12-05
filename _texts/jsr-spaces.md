@@ -34,5 +34,5 @@ To foster a vibrant workspace culture that promotes growth, creativity, and conn
 
 JSR Spaces is not just a workspace; it’s where your ideas take shape, your network grows, and your business thrives.  
 
-Visit us at: [www.jsrspaces.com](http://www.jsrspaces.com)  
+Visit us at: [www.jsrspaces.com](https://jsrspaces.com/)  
 Contact us at: [contact@jsrspaces.com](mailto:contact@jsrspaces.com)  

@@ -35,10 +35,10 @@ Develop high-quality software, grow future engineers through structured learning
 
 We've developed and launched multiple platforms:
 
-1. **WePray**: A communal prayer mobile app connecting communities through technology
-2. **SpeakOut Platform**: A mental-health and recovery support platform
-3. **Squad X Camp**: A training ecosystem for students and graduates
-4. **JSR Spaces**: Coworking spaces in Cairo, Egypt (co-founded and running)
+1. **[WePray](https://wepray.us/)**: A communal prayer mobile app connecting communities through technology
+2. **[SpeakOut Platform](https://speakout.icu/)**: A mental-health and recovery support platform
+3. **[Squad X Camp](https://squadxcamp.com/)**: A training ecosystem for students and graduates
+4. **[JSR Spaces](https://jsrspaces.com/)**: Coworking spaces in Cairo, Egypt (co-founded and running)
 
 Plus several internal tools for operations, automation, and productivity.
 
@@ -64,7 +64,7 @@ Plus several internal tools for operations, automation, and productivity.
 - Strong engineering culture focused on quality, speed, ownership, and teamwork
 - Real-world training opportunities through hands-on product development
 
-Visit us at: [www.masteryhub-its.com](http://www.masteryhub-its.com)  
+Visit us at: [www.masteryhub-its.com](https://www.masteryhub-its.com/)  
 Contact us at: [contact@masteryhub-its.com](mailto:contact@masteryhub-its.com)  
 
 MasteryHub ITS is more than a software house — it's a partner in innovation, helping businesses turn ideas into reality, training the next generation of engineers, and creating opportunities that make a meaningful impact.  
