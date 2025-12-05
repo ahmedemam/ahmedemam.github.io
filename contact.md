@@ -17,7 +17,7 @@ I'd love to hear from you! Whether you're interested in collaborating on a proje
 - **Location**: Shoubra, Cairo, Egypt
 
 ### Professional Networks
-- **LinkedIn**: [ahmedhardworker](https://www.linkedin.com/in/ahmedhardworker/) - Connect for professional opportunities
+- **LinkedIn**: [ahmedemam11](https://www.linkedin.com/in/ahmedemam11/) - Connect for professional opportunities
 - **GitHub**: [@ahmedemam](https://github.com/ahmedemam) - View my code and open-source contributions
 
 ---

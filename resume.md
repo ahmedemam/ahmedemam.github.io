@@ -7,7 +7,7 @@ permalink: /resume/
 # Ahmed Emam
 
 **Founder & Staff Software Development Engineer**  
-[LinkedIn](https://www.linkedin.com/in/ahmedhardworker/) | [ahmedemam.io](https://ahmedemam.github.io) | [Email](mailto:ahmedabdelazizemam@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/ahmedemam11/) | [ahmedemam.io](https://ahmedemam.github.io) | [Email](mailto:ahmedabdelazizemam@gmail.com)
 
 ---
 
@@ -215,7 +215,7 @@ An integration and automation project evaluating multiple platforms and assembli
 
 Feel free to connect with me:
 
-- **LinkedIn**: [ahmedhardworker](https://www.linkedin.com/in/ahmedhardworker/)
+- **LinkedIn**: [ahmedemam11](https://www.linkedin.com/in/ahmedemam11/)
 - **GitHub**: [ahmedemam](https://github.com/ahmedemam)
 - **Website**: [ahmedemam.io](https://ahmedemam.github.io)
 - **Email**: [ahmedabdelazizemam@gmail.com](mailto:ahmedabdelazizemam@gmail.com)
