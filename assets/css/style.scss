@@ -34,23 +34,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Skip to content link */
-.skip-to-content {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px 16px;
-  text-decoration: none;
-  z-index: 100;
-  font-weight: 400;
-  
-  &:focus {
-    top: 0;
-  }
-}
-
 /* Resume-style layout: tight spacing, long vertical format */
 body {
   font-size: 18px;
