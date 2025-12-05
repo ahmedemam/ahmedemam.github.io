@@ -85,6 +85,8 @@ Advancing global consumer health, safety, and nutrition through scientific model
 
 **Tech Stack**: React, AngularJS, Angular, TypeScript, **Qlik Sense**, **Mashups**, Nebula.js, Enigma.js, plus various internal services and frameworks
 
+[Visit Creme Global](https://www.cremeglobal.com/)
+
 ---
 
 ### **Senior Software Development Engineer @ Jumia Food**
@@ -97,6 +99,8 @@ Jumia is a leading Pan-African technology company focused on e-commerce, logisti
 - Improved core services and backend components to support large-scale food delivery operations and high-traffic workflows
 - Worked across multiple technologies including **Symfony Framework**, **Zend Framework**, **Laravel Framework**, **Node.js**, and **GoLang**
 
+[Visit Jumia Food](https://food.jumia.com.eg/)
+
 ---
 
 ### **Senior Software Development Engineer @ Cloudypedia**
@@ -107,6 +111,8 @@ Cloudypedia specializes in modernizing infrastructure and transforming how teams
 
 - **HEAM Project for Lean Business Service**: Built and maintained a CMS application that allows customers to consume APIs, track usage, and manage their own API consumption across different services
 - Implemented and integrated backend and platform features using **Symfony PHP**, **Apigee GCP**, **Apigee Monetization**, and **Drupal CMS**
+
+[Visit Cloudypedia](https://www.cloudypedia.com/)
 
 ---
 
@@ -120,6 +126,8 @@ A startup building a one-stop platform for medical insurance services for compan
 - **Tech**: React, TypeScript, NestJS, Prisma ORM, AWS ECS, Bitbucket, Jira, Terraform
 - Contributed to building the company-wide **Single Sign-On (SSO)** layer, improving authentication and access control across all internal applications
 - **Tech**: Keycloak, Kong API Gateway, Docker, Docker Compose
+
+[Visit Beyond Solution](https://beyond-solution.com/)
 
 ---
 
@@ -151,6 +159,8 @@ An integration and automation project evaluating multiple platforms and assembli
   - **Message queues** (ActiveMQ)
   - **Monitoring & logging** (ELK Stack)
 - Contributed using tools such as **Gradle**, **Zoho**, **GitLab**, and others
+
+[Visit Orange](https://www.orange.com/)
 
 ---
 
