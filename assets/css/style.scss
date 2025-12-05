@@ -214,20 +214,31 @@ hr {
   }
 }
 
-/* Resume-style introduction */
+/* Homepage introduction */
 .introduction {
-  margin: 0 0 1.5em 0;
+  text-align: center;
+  margin: 0 0 2em 0;
+  padding: 0;
   
   h1 {
-    font-size: 1.8em;
+    font-size: 2.2em;
     font-weight: 600;
     margin-bottom: 0.5em;
     margin-top: 0;
   }
   
   p {
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0.5em 0;
+    
+    a {
+      color: $link-color;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
