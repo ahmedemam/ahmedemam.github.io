@@ -17,7 +17,6 @@ This website serves as a platform to showcase my professional journey, achieveme
    - Showcase of my key ventures:  
      - **MasteryHub ITS**: Innovative software solutions.  
      - **JSR Spaces**: Collaborative coworking environments.  
-     - **Islamic Technology Community Center (ITCC)**: Empowering communities through technology.  
      - **Al Hafez**: Quran education for thousands of children in Egypt.  
 
 4. **Blog/Insights**  

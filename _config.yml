@@ -3,7 +3,7 @@
 # Setup
 title:               Ahmed Emam.
 tagline:             'Founder & Staff Software Development Engineer, Entrepreneur'
-description:         'Ahmed Emam is a Founder & Staff Software Development Engineer with 7+ years of experience building scalable platforms, leading engineering teams, and shipping products. Founder of MasteryHub ITS, co-founder of JSR Spaces, and founder of ITCC. Specializing in full-stack development, cloud computing, and creating impactful technology solutions.'
+description:         'Ahmed Emam is a Founder & Staff Software Development Engineer with 7+ years of experience building scalable platforms, leading engineering teams, and shipping products. Founder of MasteryHub ITS and co-founder of JSR Spaces. Specializing in full-stack development, cloud computing, and creating impactful technology solutions.'
 url:                 'https://ahmedemam.github.io'
 baseurl:             '/'
 logo:               '/assets/logo.png'
