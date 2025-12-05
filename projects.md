@@ -123,7 +123,7 @@ A full-stack reading management application built with the **MERN stack** (Mongo
 I'm always interested in collaborating on interesting projects, contributing to open-source initiatives, or discussing technical challenges.
 
 - **GitHub**: [@ahmedemam](https://github.com/ahmedemam) - View all repositories
-- **LinkedIn**: [ahmedhardworker](https://www.linkedin.com/in/ahmedhardworker/) - Professional network
+- **LinkedIn**: [ahmedemam11](https://www.linkedin.com/in/ahmedemam11/) - Professional network
 - **Email**: [ahmedabdelazizemam@gmail.com](mailto:ahmedabdelazizemam@gmail.com) - Direct inquiries
 
 ---

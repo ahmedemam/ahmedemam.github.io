@@ -197,5 +197,5 @@ Whether through cutting-edge software development, inspiring coworking spaces, o
 I'm always open to discussing new opportunities, collaborations, or sharing insights on software engineering, entrepreneurship, and community building.
 
 - **Email**: [ahmedabdelazizemam@gmail.com](mailto:ahmedabdelazizemam@gmail.com)
-- **LinkedIn**: [ahmedhardworker](https://www.linkedin.com/in/ahmedhardworker/)
+- **LinkedIn**: [ahmedemam11](https://www.linkedin.com/in/ahmedemam11/)
 - **GitHub**: [ahmedemam](https://github.com/ahmedemam)  
