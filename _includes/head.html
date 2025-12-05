@@ -67,12 +67,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
   
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    "sameAs": [
+      "https://www.linkedin.com/in/ahmedemam11/",
+      "https://github.com/ahmedemam"
+    ],
+    "jobTitle": "Founder & Staff Software Development Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "MasteryHub ITS",
+      "url": "http://www.masteryhub-its.com"
+    },
+    "email": "{{ site.author.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cairo",
+      "addressCountry": "Egypt"
+    }
+  }
+  </script>
+  
   <!-- CSS link -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="180x180" href="{{ site.baseurl }}/assets/apple-touch-icon-precomposed.png" />
   <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico" />
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="{{ site.baseurl }}/manifest.json" />
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ directory_url }}/atom.xml" />

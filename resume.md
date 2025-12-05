@@ -2,6 +2,19 @@
 layout: page
 title: Resume
 permalink: /resume/
+toc: true
+---
+
+*Table of Contents:*
+- [Summary](#summary)
+- [About](#about)
+- [Languages](#languages)
+- [Experience](#experience)
+- [Education](#education)
+- [Technical Skills](#technical-skills)
+- [Interests](#interests)
+- [Contact](#contact)
+
 ---
 
 # Ahmed Emam
