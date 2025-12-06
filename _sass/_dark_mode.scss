@@ -1,21 +1,19 @@
-[data-theme="dark"] body {
-    background-color: var(--bg-color);
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 30px 30px;
-    background-attachment: fixed;
-    /* Ensures pattern stays fixed on scroll */
-    min-height: 100vh;
-}
-
 [data-theme="dark"] {
-    --bg-color: #0f0f0f;
+    --bg-color: #111111;
     --text-color: #e0e0e0;
     --heading-color: #ffffff;
     --link-color: #64b5f6;
     --border-color: #333;
-    --sidebar-bg: #151515;
+    --sidebar-bg: #1a1a1a;
+
+    /* Professional Dot Grid Pattern */
+    background-color: var(--bg-color);
+    background-image:
+        radial-gradient(#333 1px, transparent 1px),
+        radial-gradient(#333 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    background-attachment: fixed;
 }
 
 [data-theme="dark"] img {
@@ -30,6 +28,7 @@
 [data-theme="dark"] .sidebar {
     background-color: var(--sidebar-bg);
     background-image: none;
+    /* No pattern on sidebar for contrast */
     border-right: 1px solid #333;
 }
 
@@ -38,16 +37,10 @@
 }
 
 /* Ensure content is readable over pattern */
+[data-theme="dark"] .content,
 [data-theme="dark"] .container {
-    background-color: transparent;
-    /* Let pattern show through, or use slight opacity if needed */
-}
-
-[data-theme="dark"] .content {
-    /* Optional: Add a subtle backing if text contrast is an issue, 
-      but for a clean look, direct on pattern is often preferred if pattern is subtle enough.
-      If needed, uncomment below: */
-    /* background-color: rgba(15, 15, 15, 0.8); */
-    /* padding: 20px; */
-    /* border-radius: 8px; */
+    background-color: rgba(17, 17, 17, 0.85);
+    /* Slight backdrop for text readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
