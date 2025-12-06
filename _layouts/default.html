@@ -29,9 +29,21 @@
               <img src="{{ site.logo }}" alt="{{ site.title }}" width="200px" height="200px" style="margin: 0 auto">
       <a href="{{ site.baseurl }}/" title="Home" aria-label="Home">{{ site.title | newline_to_br }}</a>
       <br><small>{{ site.tagline }}</small>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" style="background: none; border: none; cursor: pointer; font-size: 1.2rem; display: block; margin: 10px auto;">
-        <span id="theme-icon-light">☀️</span>
-        <span id="theme-icon-dark" style="display: none;">🌙</span>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" style="background: none; border: none; cursor: pointer; display: block; margin: 10px auto; padding: 5px;">
+        <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; color: var(--link-color);">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none; color: var(--link-color);">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
       </button>
           </h3>
         </div>
@@ -363,13 +375,17 @@
     const darkIcon = document.getElementById('theme-icon-dark');
     const html = document.documentElement;
 
-    // Check preference - Default to Dark
-    const currentTheme = localStorage.getItem('theme') || 'dark';
+    // Check preference - Default to Light
+    const currentTheme = localStorage.getItem('theme') || 'light';
 
     if (currentTheme === 'dark') {
       html.setAttribute('data-theme', 'dark');
       lightIcon.style.display = 'none';
-      if (darkIcon) darkIcon.style.display = 'inline';
+      if (darkIcon) darkIcon.style.display = 'block';
+    } else {
+      // Ensure icons are correct for initial light mode
+      lightIcon.style.display = 'block';
+      if (darkIcon) darkIcon.style.display = 'none';
     }
 
     if (toggleBtn) {
@@ -377,13 +393,13 @@
         if (html.getAttribute('data-theme') === 'dark') {
           html.removeAttribute('data-theme');
           localStorage.setItem('theme', 'light');
-          lightIcon.style.display = 'inline';
+          lightIcon.style.display = 'block';
           if (darkIcon) darkIcon.style.display = 'none';
         } else {
           html.setAttribute('data-theme', 'dark');
           localStorage.setItem('theme', 'dark');
           lightIcon.style.display = 'none';
-          if (darkIcon) darkIcon.style.display = 'inline';
+          if (darkIcon) darkIcon.style.display = 'block';
         }
       });
     }
