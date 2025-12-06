@@ -1,0 +1,25 @@
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --link-color: #64b5f6;
+    --border-color: #444;
+    --sidebar-bg: #2d2d2d;
+}
+
+[data-theme="dark"] img {
+    opacity: .8;
+    transition: opacity .5s ease-in-out;
+}
+
+[data-theme="dark"] img:hover {
+    opacity: 1;
+}
+
+[data-theme="dark"] .sidebar {
+    background-color: var(--sidebar-bg);
+}
+
+[data-theme="dark"] .posts-list-item:hover {
+    background-color: #333;
+}
