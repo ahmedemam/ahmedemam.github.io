@@ -27,8 +27,12 @@
           <h3 class="masthead-title">
             <!-- logo -->
               <img src="{{ site.logo }}" alt="{{ site.title }}" width="200px" height="200px" style="margin: 0 auto">
-            <a href="{{ site.baseurl }}/" title="Home" aria-label="Home">{{ site.title | newline_to_br }}</a>
-            <br><small>{{ site.tagline }}</small>
+      <a href="{{ site.baseurl }}/" title="Home" aria-label="Home">{{ site.title | newline_to_br }}</a>
+      <br><small>{{ site.tagline }}</small>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" style="background: none; border: none; cursor: pointer; font-size: 1.2rem; display: block; margin: 10px auto;">
+        <span id="theme-icon-light">☀️</span>
+        <span id="theme-icon-dark" style="display: none;">🌙</span>
+      </button>
           </h3>
         </div>
       </header>
@@ -350,6 +354,40 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const lightIcon = document.getElementById('theme-icon-light');
+    const darkIcon = document.getElementById('theme-icon-dark');
+    const html = document.documentElement;
+
+    // Check preference
+    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    if (currentTheme === 'dark') {
+      html.setAttribute('data-theme', 'dark');
+      lightIcon.style.display = 'none';
+      if (darkIcon) darkIcon.style.display = 'inline';
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function() {
+        if (html.getAttribute('data-theme') === 'dark') {
+          html.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+          lightIcon.style.display = 'inline';
+          if (darkIcon) darkIcon.style.display = 'none';
+        } else {
+          html.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+          lightIcon.style.display = 'none';
+          if (darkIcon) darkIcon.style.display = 'inline';
+        }
+      });
+    }
+  })();
 </script>
   </body>
 </html>
