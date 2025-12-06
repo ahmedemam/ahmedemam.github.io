@@ -1,14 +1,23 @@
 [data-theme="dark"] {
-    --bg-color: #1a1a1a;
+    --bg-color: #111111;
     --text-color: #e0e0e0;
     --heading-color: #ffffff;
     --link-color: #64b5f6;
-    --border-color: #444;
-    --sidebar-bg: #2d2d2d;
+    --border-color: #333;
+    --sidebar-bg: #1a1a1a;
+
+    /* Professional Dot Grid Pattern */
+    background-color: var(--bg-color);
+    background-image:
+        radial-gradient(#333 1px, transparent 1px),
+        radial-gradient(#333 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    background-attachment: fixed;
 }
 
 [data-theme="dark"] img {
-    opacity: .8;
+    opacity: .85;
     transition: opacity .5s ease-in-out;
 }
 
@@ -18,8 +27,20 @@
 
 [data-theme="dark"] .sidebar {
     background-color: var(--sidebar-bg);
+    background-image: none;
+    /* No pattern on sidebar for contrast */
+    border-right: 1px solid #333;
 }
 
 [data-theme="dark"] .posts-list-item:hover {
-    background-color: #333;
+    background-color: #222;
+}
+
+/* Ensure content is readable over pattern */
+[data-theme="dark"] .content,
+[data-theme="dark"] .container {
+    background-color: rgba(17, 17, 17, 0.85);
+    /* Slight backdrop for text readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
