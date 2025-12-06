@@ -363,8 +363,8 @@
     const darkIcon = document.getElementById('theme-icon-dark');
     const html = document.documentElement;
 
-    // Check preference
-    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    // Check preference - Default to Dark
+    const currentTheme = localStorage.getItem('theme') || 'dark';
 
     if (currentTheme === 'dark') {
       html.setAttribute('data-theme', 'dark');
