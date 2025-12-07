@@ -1,6 +1,4 @@
----
-sitemap: false
----
+--- sitemap: false ---
 /*
   Common Variables
 
@@ -20,19 +18,11 @@ $regular-font-size: 1.25em;
   Make sure to leave color-scheme in `_config.yml` file empty for granular control
 */
 
-:root {
-  --bg-color: #1a1a1a;
-  --text-color: #e0e0e0;
-  --heading-color: #ffffff;
-  --link-color: #64b5f6;
-  --border-color: #333;
-  --sidebar-bg: #1a1a1a;
-}
-
 $text-color: var(--text-color);
 $heading-color: var(--heading-color);
 $link-color: var(--link-color);
 $border-color: var(--border-color);
+
 
 @import "ed";
 @import "syntax";
@@ -202,7 +192,6 @@ body {
 
 /* Lazy loading for images */
 img {
-  loading: lazy;
   max-width: 100%;
   height: auto;
 }
