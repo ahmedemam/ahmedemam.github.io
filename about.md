@@ -51,13 +51,13 @@ Advancing global consumer health, safety, and nutrition through scientific model
 ### Previous Roles
 
 **Senior Software Development Engineer @ [Jumia Food](https://food.jumia.com.eg/){:target="_blank" rel="noopener noreferrer"}** (April 2022 – October 2022)
-- Jumia is a leading Pan-African technology company focused on e-commerce, logistics, and digital payments
+- **Jumia** is a leading Pan-African technology company focused on e-commerce, logistics, and digital payments
 - Developed and maintained the **Jumia Food application**, ensuring stability, performance, and the rollout of new features across **10+ countries**
 - Improved core services and backend components to support large-scale food delivery operations and high-traffic workflows
-- **Tech Stack**: Symfony Framework, Zend Framework, Laravel Framework, Node.js, GoLang
+- **Tech Stack**: **Symfony Framework**, **Zend Framework**, **Laravel Framework**, **Node.js**, **GoLang**
 
 **Senior Software Development Engineer @ [Cloudypedia](https://www.cloudypedia.com/){:target="_blank" rel="noopener noreferrer"}** (June 2021 – April 2022)
-- Cloudypedia specializes in modernizing infrastructure and transforming how teams collaborate and manage digital services
+- **Cloudypedia** specializes in modernizing infrastructure and transforming how teams collaborate and manage digital services
 - **HEAM Project for Lean Business Service**: Built and maintained a CMS application that allows customers to consume APIs, track usage, and manage their own API consumption across different services
 - Implemented and integrated backend and platform features using **Symfony PHP**, **Apigee GCP**, **Apigee Monetization**, and **Drupal CMS**
 
@@ -70,21 +70,21 @@ Advancing global consumer health, safety, and nutrition through scientific model
 **Software Development Engineer @ [Orange Innovation Egypt](https://www.orange.com/){:target="_blank" rel="noopener noreferrer"}** (July 2019 – December 2020)
 
 **CIB Egypt – Board Member Meeting Application:**
-- Built a secure platform enabling CIB board members to manage meetings efficiently
+- Built a secure platform enabling **CIB** board members to manage meetings efficiently
 - Built the web application version using **Angular**, **TypeScript**, **NgRx**
 - Contributed to building the CI/CD pipeline and setting up development and production environments using **Nginx Reverse Proxy**, **AWS CodeCommit**, **AWS Lambda** Functions, **Jenkins**
 - Developed and maintained the mobile application version using **Angular**, **IONIC Framework**, **TypeScript**, **NgRx**
 
 **Orange France – House of Partnership Platform:**
-- A global internal application for recording and managing all Orange partnerships across international branches
+- A global internal application for recording and managing all **Orange** partnerships across international branches
 - Worked as a core developer, delivering two project phases out of three while collaborating closely with an international team
-- **Tech Stack**: Angular, TypeScript, NgRx, Nginx, AWS, Taiga Management Platform
+- **Tech Stack**: **Angular**, **TypeScript**, **NgRx**, **Nginx**, **AWS**, **Taiga Management Platform**
 
 **Compose IPAAS Project – Integration Platforms:**
 - An integration and automation project evaluating multiple platforms and assembling full applications
 - Worked with **Interlok Adaptris** and **MuleSoft** to build configurable integration pipelines
-- Integrated multiple system components such as **Message queues** (ActiveMQ), **Monitoring & logging** (ELK Stack)
-- **Tools**: Gradle, Zoho, GitLab
+- Integrated multiple system components such as **Message queues** (**ActiveMQ**), **Monitoring & logging** (**ELK Stack**)
+- **Tools**: **Gradle**, **Zoho**, **GitLab**
 
 ---
 
