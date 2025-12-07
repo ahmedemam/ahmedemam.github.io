@@ -1,11 +1,74 @@
 ---
 layout: page
 title: Contact
+description: Get in touch with Ahmed Emam for collaboration, consulting, or business opportunities. Available for software development projects, technical consulting, and partnerships.
 ---
 
 # Get in Touch
 
 I'd love to hear from you! Whether you're interested in collaborating on a project, discussing business opportunities, seeking mentorship, or simply connecting, I'm always open to meaningful conversations.
+
+---
+
+## 📧 Contact Form
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" id="contact-form">
+  <div class="form-group">
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" required placeholder="Your full name">
+  </div>
+  
+  <div class="form-group">
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+  </div>
+  
+  <div class="form-group">
+    <label for="subject">Subject *</label>
+    <input type="text" id="subject" name="subject" required placeholder="What is this regarding?">
+  </div>
+  
+  <div class="form-group">
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or inquiry..."></textarea>
+  </div>
+  
+  <div class="form-group">
+    <button type="submit" class="submit-button">Send Message</button>
+  </div>
+  
+  <div id="form-status" class="form-status"></div>
+</form>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+  
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        formStatus.innerHTML = '<p class="success-message">✅ Thank you! Your message has been sent successfully. I\'ll get back to you within 24-48 hours.</p>';
+        form.reset();
+      } else {
+        formStatus.innerHTML = '<p class="error-message">❌ Oops! There was a problem sending your message. Please try again or email me directly.</p>';
+      }
+    })
+    .catch(error => {
+      formStatus.innerHTML = '<p class="error-message">❌ Oops! There was a problem sending your message. Please try again or email me directly.</p>';
+    });
+  });
+</script>
 
 ---
 
@@ -53,12 +116,7 @@ I'd love to hear from you! Whether you're interested in collaborating on a proje
 
 ## 📬 Response Time
 
-I typically respond to emails within **24-48 hours**. For urgent matters, please mention it in the subject line. For collaboration inquiries, please include:
-
-- Brief description of the opportunity or project
-- Your role and organization
-- Timeline and expectations
-- How we can work together
+I typically respond to emails within **24-48 hours**. For urgent matters, please mention it in the subject line.
 
 ---
 
@@ -80,4 +138,4 @@ I typically respond to emails within **24-48 hours**. For urgent matters, please
 
 ---
 
-*Looking forward to connecting and exploring how we can collaborate to create something meaningful!*  
+*Looking forward to connecting and exploring how we can collaborate to create something meaningful!*
