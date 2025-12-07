@@ -375,15 +375,15 @@
     const darkIcon = document.getElementById('theme-icon-dark');
     const html = document.documentElement;
 
-    // Check preference - Default to Light
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // Check preference - Default to Dark
+    const currentTheme = localStorage.getItem('theme') || 'dark';
 
     if (currentTheme === 'dark') {
       html.setAttribute('data-theme', 'dark');
       lightIcon.style.display = 'none';
       if (darkIcon) darkIcon.style.display = 'block';
     } else {
-      // Ensure icons are correct for initial light mode
+      // Light mode when explicitly selected
       lightIcon.style.display = 'block';
       if (darkIcon) darkIcon.style.display = 'none';
     }
