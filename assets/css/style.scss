@@ -1,6 +1,4 @@
----
-sitemap: false
----
+--- sitemap: false ---
 /*
   Common Variables
 
@@ -8,8 +6,8 @@ sitemap: false
 */
 
 /* Fonts */
-$main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$heading-font: "Bree Serif", serif;
+$main-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$heading-font: "Josefin Slab", serif;
 $regular-font-size: 1.25em;
 /* 20px / 16px = 1.25em; support text resizing in all browsers */
 
@@ -38,7 +36,7 @@ $border-color: var(--border-color);
 @import "syntax";
 @import "dark_mode";
 
-/* Masthead title - use Bree Serif */
+/* Masthead title */
 .masthead-title {
   font-family: $heading-font;
 
@@ -59,11 +57,14 @@ html {
 /* Resume-style layout: tight spacing, long vertical format */
 body {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.7;
+  /* Increased line-height for better readability */
   text-align: left;
   transition: all 0.3s ease;
   background-color: var(--bg-color);
   color: $text-color;
+  letter-spacing: -0.01em;
+  /* Slight tightening for Inter */
 }
 
 .wrap {
@@ -87,6 +88,7 @@ body {
   font-weight: 400;
   transition: all 0.3s ease;
   font-family: $heading-font;
+  letter-spacing: 0.5px;
 
   a {
     color: $link-color;
@@ -317,7 +319,8 @@ h2 {
   margin-top: 0.6em;
   margin-bottom: 0.3em;
   line-height: 1.3;
-  font-weight: 400;
+  font-weight: 300;
+  /* Lighter weight for headings */
   text-align: left;
   font-family: $heading-font;
   transition: all 0.3s ease;
@@ -338,14 +341,20 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3em;
+  /* Larger H1 */
+  font-weight: 300;
   margin-top: 0;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 1.8em;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 2em;
+  text-transform: none;
+  /* Removed uppercase for a cleaner look */
+  font-weight: 400;
+  /* Slightly bolder than H1 */
+  letter-spacing: -0.01em;
   padding-bottom: 0.1em;
   margin-top: 0.8em;
   margin-bottom: 0.4em;
@@ -526,7 +535,7 @@ h4 {
 
   h1 {
     font-size: 2.2em;
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 0.5em;
     margin-top: 0;
     font-family: $heading-font;
@@ -636,7 +645,7 @@ h4 {
 
   h1 {
     font-size: 2.2em;
-    font-weight: 400;
+    font-weight: 300;
     margin: 0 0 0.3em 0;
     padding: 0;
     font-family: $heading-font;
