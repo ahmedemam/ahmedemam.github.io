@@ -5,59 +5,69 @@
 
   <body class="theme-base-{{site.color-scheme}}">
 
-    {% include top-nav.html %}
+    <!-- This if statement decides which sidebar to use -->
+    {% if page.toc %}
+    {% include sidebar-toc.html %}
+    {% else %}
+    {% include sidebar.html %}
+    {% endif %}
 
-    <div class="app-layout">
-      {% include left-sidebar.html %}
-      
-      <main class="main-content" id="main" role="main">
-        <div class="main-content-wrapper">
-          {% unless page.url == '/' or page.url == '/index.html' %}
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <a href="{{ site.baseurl }}/">Home</a>
-            <span> / </span>
-            <span>{{ page.title }}</span>
-          </nav>
-          {% endunless %}
-          
-          {% unless page.url == '/' or page.url == '/index.html' %}
-          <div class="page-header">
-            <div class="page-header-top">
-              <h1 class="page-title">{{ page.title }}</h1>
-              <button class="copy-page-button" aria-label="Copy page" title="Copy page">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-              </button>
-            </div>
-            {% if page.date %}
-            <p class="page-meta">Last updated {{ page.date | date: "%B %d, %Y" }}</p>
-            {% elsif page.show_reading_time != false %}
-            <p class="page-meta">
-              {% include reading-time.html %}
-            </p>
-            {% endif %}
-          </div>
-          {% endunless %}
-
-          <div id="loading-indicator" class="loading-indicator" style="display: none;">
-            <div class="loading-spinner"></div>
-          </div>
-          
-          <div class="content">
-            {{ content }}
-          </div>
+    <!--
+      Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS
+      collisions with our real content.
+    -->
+    <div class="wrap">
+      <button class="sidebar-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="sidebar">
+      </button>
+      <header class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <!-- logo -->
+              <img src="{{ site.logo }}" alt="{{ site.title }}" width="200px" height="200px" style="margin: 0 auto">
+      <a href="{{ site.baseurl }}/" title="Home" aria-label="Home">{{ site.title | newline_to_br }}</a>
+      <br><small>{{ site.tagline }}</small>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" style="background: none; border: none; cursor: pointer; display: block; margin: 10px auto; padding: 5px;">
+        <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; color: var(--link-color);">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none; color: var(--link-color);">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+          </h3>
         </div>
+      </header>
+
+      <main class="container content" id="main" role="main">
+        <nav class="site-nav" role="navigation" aria-label="Main navigation">
+          <a href="{{ site.baseurl }}/" aria-label="Home page">Home</a> | 
+          <a href="{{ site.baseurl }}/resume/" aria-label="Resume page">Resume</a> | 
+          <a href="{{ site.baseurl }}/about/" aria-label="About page">About</a> | 
+          <a href="{{ site.baseurl }}/projects/" aria-label="Projects page">Projects</a> | 
+          <a href="{{ site.baseurl }}/contact/" aria-label="Contact page">Contact</a>
+        </nav>
+        <div id="loading-indicator" class="loading-indicator" style="display: none;">
+          <div class="loading-spinner"></div>
+        </div>
+        {{ content }}
       </main>
       
-      {% include right-sidebar.html %}
+      <!-- Scroll to top button -->
+      <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" style="display: none;">
+        ↑
+      </button>
     </div>
-    
-    <!-- Scroll to top button -->
-    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" style="display: none;">
-      ↑
-    </button>
 
     <script>
 
@@ -75,6 +85,34 @@
         document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
       }
 
+      // Support sidebar toggle
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var sidebarNavLink = document.querySelector('.sidebar-nav-item');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        // Toggle sidebar
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          checkbox.checked = !checkbox.checked;
+          toggle.setAttribute('aria-expanded', checkbox.checked);
+          sidebar.setAttribute('aria-hidden', !checkbox.checked);
+        });
+
+        // Make sure we focus on the menu once it opens to aid tab navigation
+        sidebar.addEventListener('transitionend', function() {sidebarNavLink.focus()});
+
+        // Clicking anywhere in the sidebar should close the menu
+        sidebar.addEventListener('click', function(e) {
+          checkbox.checked = false;
+          toggle.setAttribute('aria-expanded', false);
+          sidebar.setAttribute('aria-hidden', true);
+        })
+
+      })(document);
+    </script>
 
     <!-- AJAX Navigation for Internal Links -->
     <script>
@@ -330,166 +368,42 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-    <!-- Theme Toggle -->
-    <script>
-      (function() {
-        const toggleBtn = document.getElementById('theme-toggle');
-        const lightIcon = document.getElementById('theme-icon-light');
-        const darkIcon = document.getElementById('theme-icon-dark');
-        const html = document.documentElement;
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const lightIcon = document.getElementById('theme-icon-light');
+    const darkIcon = document.getElementById('theme-icon-dark');
+    const html = document.documentElement;
 
-        // Check preference - Default to Light (like Next.js docs)
-        const currentTheme = localStorage.getItem('theme') || 'light';
+    // Check preference - Default to Dark
+    const currentTheme = localStorage.getItem('theme') || 'dark';
 
-        if (currentTheme === 'dark') {
-          html.setAttribute('data-theme', 'dark');
-          if (lightIcon) lightIcon.style.display = 'none';
-          if (darkIcon) darkIcon.style.display = 'block';
-        } else {
+    if (currentTheme === 'dark') {
+      html.setAttribute('data-theme', 'dark');
+      lightIcon.style.display = 'none';
+      if (darkIcon) darkIcon.style.display = 'block';
+    } else {
+      // Light mode when explicitly selected
+      lightIcon.style.display = 'block';
+      if (darkIcon) darkIcon.style.display = 'none';
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function() {
+        if (html.getAttribute('data-theme') === 'dark') {
           html.removeAttribute('data-theme');
-          if (lightIcon) lightIcon.style.display = 'block';
+          localStorage.setItem('theme', 'light');
+          lightIcon.style.display = 'block';
           if (darkIcon) darkIcon.style.display = 'none';
+        } else {
+          html.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+          lightIcon.style.display = 'none';
+          if (darkIcon) darkIcon.style.display = 'block';
         }
-
-        if (toggleBtn) {
-          toggleBtn.addEventListener('click', function() {
-            if (html.getAttribute('data-theme') === 'dark') {
-              html.removeAttribute('data-theme');
-              localStorage.setItem('theme', 'light');
-              if (lightIcon) lightIcon.style.display = 'block';
-              if (darkIcon) darkIcon.style.display = 'none';
-            } else {
-              html.setAttribute('data-theme', 'dark');
-              localStorage.setItem('theme', 'dark');
-              if (lightIcon) lightIcon.style.display = 'none';
-              if (darkIcon) darkIcon.style.display = 'block';
-            }
-          });
-        }
-      })();
-    </script>
-
-    <!-- Auto-generate Table of Contents -->
-    <script>
-      (function() {
-        const rightSidebar = document.getElementById('right-sidebar');
-        if (!rightSidebar) return;
-
-        const tocPlaceholder = document.getElementById('toc-placeholder');
-        const tocNav = rightSidebar.querySelector('.right-sidebar-nav');
-        if (!tocNav) return;
-
-        // Get all headings in the content
-        const content = document.querySelector('.content');
-        if (!content) return;
-
-        const headings = content.querySelectorAll('h2, h3');
-        if (headings.length === 0) {
-          if (tocPlaceholder) tocPlaceholder.textContent = 'No headings found';
-          return;
-        }
-
-        // Remove placeholder
-        if (tocPlaceholder) {
-          tocPlaceholder.remove();
-        }
-
-        // Generate TOC
-        headings.forEach(function(heading) {
-          // Generate ID if not present
-          if (!heading.id) {
-            heading.id = heading.textContent.toLowerCase()
-              .replace(/[^a-z0-9]+/g, '-')
-              .replace(/^-|-$/g, '');
-          }
-
-          // Create TOC item
-          const tocItem = document.createElement('a');
-          tocItem.className = 'right-sidebar-nav-item';
-          tocItem.href = '#' + heading.id;
-          tocItem.textContent = heading.textContent;
-          
-          // Add indentation for h3
-          if (heading.tagName === 'H3') {
-            tocItem.style.paddingLeft = '1.5rem';
-            tocItem.style.fontSize = '0.8125rem';
-          }
-
-          tocNav.appendChild(tocItem);
-        });
-
-        // Highlight active TOC item on scroll
-        const tocItems = tocNav.querySelectorAll('.right-sidebar-nav-item');
-        const observerOptions = {
-          rootMargin: '-20% 0% -70% 0%',
-          threshold: 0
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            const id = entry.target.id;
-            const tocItem = tocNav.querySelector('a[href="#' + id + '"]');
-            
-            if (entry.isIntersecting) {
-              tocItems.forEach(function(item) {
-                item.classList.remove('active');
-              });
-              if (tocItem) {
-                tocItem.classList.add('active');
-              }
-            }
-          });
-        }, observerOptions);
-
-        headings.forEach(function(heading) {
-          observer.observe(heading);
-        });
-      })();
-    </script>
-
-    <!-- Copy Page Button -->
-    <script>
-      (function() {
-        const copyButton = document.querySelector('.copy-page-button');
-        if (!copyButton) return;
-
-        copyButton.addEventListener('click', function() {
-          const url = window.location.href;
-          navigator.clipboard.writeText(url).then(function() {
-            const originalHTML = copyButton.innerHTML;
-            copyButton.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-            setTimeout(function() {
-              copyButton.innerHTML = originalHTML;
-            }, 2000);
-          });
-        });
-      })();
-    </script>
-
-    <!-- Search Functionality -->
-    <script>
-      (function() {
-        const searchInput = document.getElementById('top-nav-search-input');
-        if (!searchInput) return;
-
-        // Focus search on Ctrl+K
-        document.addEventListener('keydown', function(e) {
-          if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-            e.preventDefault();
-            searchInput.focus();
-          }
-        });
-
-        // Simple search - redirect to search page
-        searchInput.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter') {
-            const query = searchInput.value.trim();
-            if (query) {
-              window.location.href = '{{ site.baseurl }}/search.html?q=' + encodeURIComponent(query);
-            }
-          }
-        });
-      })();
-    </script>
+      });
+    }
+  })();
+</script>
   </body>
 </html>
