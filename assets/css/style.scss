@@ -83,8 +83,8 @@ body {
 /* Site navigation - Enhanced */
 .site-nav {
   text-align: center;
-  margin: 0 0 1.5em 0;
-  padding: 0.8em 0;
+  margin: 0 0 1em 0;
+  padding: 0.6em 0;
   font-size: 1.1em;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -326,7 +326,7 @@ a:focus {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   text-align: left;
   animation: fadeIn 0.6s ease-out;
 }
@@ -399,8 +399,8 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding-bottom: 0.5em;
-  margin-top: 1.5em;
-  margin-bottom: 0.8em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
   text-align: left;
   color: $heading-color;
   font-weight: 500;
@@ -433,8 +433,8 @@ h4 {
 }
 
 p {
-  margin: 0 0 0.8em 0;
-  line-height: 1.7;
+  margin: 0 0 0.5em 0;
+  line-height: 1.6;
   text-align: left;
   transition: all 0.3s ease;
   font-size: 1.05em;
@@ -443,13 +443,13 @@ p {
 
 ul,
 ol {
-  margin: 0.8em 0;
+  margin: 0.5em 0;
   padding-left: 1.5em;
   text-align: left;
   transition: all 0.3s ease;
 
   li {
-    margin: 0.3em 0;
+    margin: 0.2em 0;
     transition: all 0.3s ease;
     line-height: 1.6;
 
@@ -588,8 +588,8 @@ h4 {
 /* Homepage introduction - Enhanced */
 .introduction {
   text-align: center;
-  margin: 0 0 1.5em 0;
-  padding: 1.5em 0;
+  margin: 0 0 1em 0;
+  padding: 1em 0;
   animation: fadeInUp 0.8s ease-out;
   position: relative;
 
@@ -608,7 +608,7 @@ h4 {
   h1 {
     font-size: 3em;
     font-weight: 400;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.3em;
     margin-top: 0;
     font-family: $heading-font;
     transition: all 0.3s ease;
@@ -625,15 +625,15 @@ h4 {
 
     p {
       font-family: $main-font;
-      line-height: 1.7;
-      margin: 0.5em 0;
+      line-height: 1.6;
+      margin: 0.3em 0;
       transition: all 0.3s ease;
       font-size: 1.05em;
 
       &:first-of-type {
         font-size: 1.15em;
         color: rgba(224, 224, 224, 0.9);
-        margin-bottom: 0.6em;
+        margin-bottom: 0.4em;
       }
 
     a {
@@ -674,10 +674,10 @@ h4 {
 .texts {
   list-style: none;
   padding: 0;
-  margin: 1em 0;
+  margin: 0.5em 0;
   display: flex;
   flex-direction: column;
-  gap: 0.8em;
+  gap: 0.6em;
 
     .text-title {
       margin: 0;
@@ -686,7 +686,7 @@ h4 {
 
       a {
         display: block;
-        padding: 1em 1.3em;
+        padding: 0.8em 1.2em;
       text-decoration: none;
       color: $heading-color;
       font-weight: 500;
@@ -872,8 +872,8 @@ article,
   }
 
   .introduction {
-    margin-bottom: 1.5em;
-    padding: 1em 0;
+    margin-bottom: 1em;
+    padding: 0.8em 0;
     
     h1 {
       font-size: 2em;
@@ -882,8 +882,8 @@ article,
 
   .site-nav {
     font-size: 0.95em;
-    margin-bottom: 1.5em;
-    padding: 0.8em 0;
+    margin-bottom: 1em;
+    padding: 0.6em 0;
 
     a {
       margin: 0 0.5em;
@@ -893,11 +893,11 @@ article,
 
   h2 {
     font-size: 1.5em;
-    margin-top: 1.5em;
+    margin-top: 1em;
   }
 
   .texts .text-title a {
-    padding: 0.9em 1.1em;
+    padding: 0.7em 1em;
     font-size: 1em;
   }
 
