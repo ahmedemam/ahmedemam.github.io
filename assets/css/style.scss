@@ -56,14 +56,16 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Resume-style layout: tight spacing, long vertical format */
+/* Enhanced body styling */
 body {
   font-size: 18px;
   line-height: 1.6;
   text-align: left;
   transition: all 0.3s ease;
-  background-color: var(--bg-color);
+  background: linear-gradient(180deg, #1a1a1a 0%, #151515 100%);
+  background-attachment: fixed;
   color: $text-color;
+  min-height: 100vh;
 }
 
 .wrap {
@@ -78,27 +80,64 @@ body {
   display: none;
 }
 
-/* Site navigation */
+/* Site navigation - Enhanced */
 .site-nav {
   text-align: center;
-  margin: 0 0 0.8em 0;
-  padding: 0.5em 0;
+  margin: 0 0 2.5em 0;
+  padding: 1.2em 0;
   font-size: 1.1em;
   font-weight: 400;
   transition: all 0.3s ease;
   font-family: $heading-font;
+  border-bottom: 1px solid rgba(100, 181, 246, 0.1);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $link-color, transparent);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 
   a {
     color: $link-color;
     text-decoration: none;
-    margin: 0 0.8em;
+    margin: 0 1em;
     font-weight: 400;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
     display: inline-block;
     font-family: $heading-font;
+    position: relative;
+    padding: 0.3em 0.5em;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -0.2em;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 100%;
+      height: 2px;
+      background: $link-color;
+      transition: transform 0.3s ease;
+    }
 
     &:hover {
-      opacity: 0.7;
+      opacity: 1;
+      transform: translateY(-2px);
+      
+      &::before {
+        transform: translateX(-50%) scaleX(1);
+      }
     }
 
     &:focus {
@@ -284,12 +323,12 @@ a:focus {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  padding: 15px 30px;
+  padding: 2rem 2.5rem;
   text-align: left;
-  animation: fadeIn 0.5s ease-in;
+  animation: fadeIn 0.6s ease-out;
 }
 
 @keyframes fadeIn {
@@ -309,6 +348,19 @@ a:focus {
   line-height: 1.6;
   max-width: 100%;
   text-align: left;
+  position: relative;
+  
+  > *:first-child {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+  }
+  
+  > *:nth-child(2) {
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+  }
+  
+  > *:nth-child(3) {
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+  }
 }
 
 /* Tight typography - left aligned */
@@ -346,12 +398,24 @@ h2 {
   font-size: 1.8em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding-bottom: 0.1em;
-  margin-top: 0.8em;
-  margin-bottom: 0.4em;
+  padding-bottom: 0.5em;
+  margin-top: 2.5em;
+  margin-bottom: 1.2em;
   text-align: left;
   color: $heading-color;
   font-weight: 500;
+  position: relative;
+  padding-left: 0;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, $link-color, transparent);
+  }
 }
 
 h3 {
@@ -369,25 +433,28 @@ h4 {
 }
 
 p {
-  margin: 0.3em 0;
-  line-height: 1.5;
+  margin: 0 0 1.4em 0;
+  line-height: 1.75;
   text-align: left;
   transition: all 0.3s ease;
+  font-size: 1.05em;
+  color: rgba(224, 224, 224, 0.9);
 }
 
 ul,
 ol {
-  margin: 0.3em 0;
-  padding-left: 1.2em;
+  margin: 1em 0;
+  padding-left: 1.5em;
   text-align: left;
   transition: all 0.3s ease;
 
   li {
-    margin: 0.15em 0;
+    margin: 0.4em 0;
     transition: all 0.3s ease;
+    line-height: 1.7;
 
     &:hover {
-      transform: translateX(3px);
+      transform: translateX(5px);
     }
   }
 }
@@ -415,11 +482,12 @@ a {
   color: $link-color;
   text-decoration: none;
   font-weight: 400;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 1;
+    color: #7ec3f6;
   }
 
   &:focus {
@@ -517,35 +585,69 @@ h4 {
   }
 }
 
-/* Homepage introduction */
+/* Homepage introduction - Enhanced */
 .introduction {
   text-align: center;
-  margin: 0 0 0.8em 0;
-  padding: 0;
-  animation: fadeInUp 0.6s ease-out;
+  margin: 0 0 3.5em 0;
+  padding: 2.5em 0;
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, $link-color, transparent);
+    opacity: 0.5;
+  }
 
   h1 {
-    font-size: 2.2em;
+    font-size: 3em;
     font-weight: 400;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.6em;
     margin-top: 0;
     font-family: $heading-font;
     transition: all 0.3s ease;
+    background: linear-gradient(135deg, $heading-color 0%, rgba(255, 255, 255, 0.8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    
+    @media (max-width: 768px) {
+      font-size: 2.2em;
+    }
   }
 
   p {
     font-family: $main-font;
-    line-height: 1.6;
-    margin: 0.3em 0;
+    line-height: 1.8;
+    margin: 0.8em 0;
     transition: all 0.3s ease;
+    font-size: 1.05em;
+
+    &:first-of-type {
+      font-size: 1.15em;
+      color: rgba(224, 224, 224, 0.9);
+      margin-bottom: 1em;
+    }
 
     a {
       color: $link-color;
       text-decoration: none;
-      transition: opacity 0.3s ease;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
 
       &:hover {
-        opacity: 0.7;
+        opacity: 1;
+        background: rgba(100, 181, 246, 0.1);
+        transform: translateY(-1px);
       }
     }
   }
@@ -568,33 +670,77 @@ h4 {
   font-weight: 400;
 }
 
-/* Resume-style project list */
-.toc {
-  margin: 0.5em 0;
+/* Enhanced project list - Card style */
+.texts {
+  list-style: none;
+  padding: 0;
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
 
-  h2 {
-    margin-bottom: 0.4em;
-  }
+  .text-title {
+    margin: 0;
+    transition: all 0.3s ease;
+    position: relative;
 
-  .texts {
-    list-style: none;
-    padding: 0;
-
-    .text-title {
-      margin: 0.2em 0;
+    a {
+      display: block;
+      padding: 1.2em 1.5em;
+      text-decoration: none;
+      color: $heading-color;
+      font-weight: 500;
+      font-size: 1.1em;
       transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(100, 181, 246, 0.1);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
 
-      a {
-        display: block;
-        padding: 0.3em;
-        text-decoration: none;
-        color: $heading-color;
-        font-weight: 500;
-        transition: opacity 0.3s ease;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(100, 181, 246, 0.1), transparent);
+        transition: left 0.5s ease;
+      }
 
-        &:hover {
-          opacity: 0.7;
+      &::after {
+        content: '→';
+        position: absolute;
+        right: 1.5em;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: all 0.3s ease;
+        color: $link-color;
+      }
+
+      &:hover {
+        opacity: 1;
+        transform: translateX(5px);
+        border-color: rgba(100, 181, 246, 0.3);
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+        &::before {
+          left: 100%;
         }
+
+        &::after {
+          opacity: 1;
+          right: 1.2em;
+        }
+      }
+
+      &:focus {
+        outline: 2px solid $link-color;
+        outline-offset: 2px;
       }
     }
   }
@@ -718,23 +864,44 @@ article,
   max-width: 1400px;
 }
 
-/* Resume-style responsive */
+/* Enhanced responsive design */
 @media (max-width: 768px) {
   .container {
-    padding: 15px;
+    padding: 1.5rem 1.25rem;
     max-width: 100%;
   }
 
-  .introduction h1 {
-    font-size: 1.5em;
+  .introduction {
+    margin-bottom: 2.5em;
+    padding: 1.5em 0;
+    
+    h1 {
+      font-size: 2em;
+    }
   }
 
   .site-nav {
-    font-size: 0.85em;
+    font-size: 0.95em;
+    margin-bottom: 2em;
+    padding: 1em 0;
 
     a {
-      margin: 0 0.3em;
-      padding: 0.2em 0.3em;
+      margin: 0 0.5em;
+      padding: 0.2em 0.4em;
     }
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-top: 2em;
+  }
+
+  .texts .text-title a {
+    padding: 1em 1.2em;
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1em;
   }
 }
