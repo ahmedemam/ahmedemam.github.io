@@ -686,6 +686,11 @@ h4 {
   gap: 0.8em;
   flex-wrap: wrap;
   align-items: center;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.6em;
+  }
 }
 
 .cta-button-primary {
