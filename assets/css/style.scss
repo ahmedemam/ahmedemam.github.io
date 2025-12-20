@@ -581,8 +581,16 @@ h4 {
     }
   }
   
-  // Style for tech stack sections
-  p:has(strong:contains("Tech Stack")) {
+  // Style for tech stack sections (paragraphs with strong tags after lists)
+  ul + p strong,
+  ol + p strong {
+    color: $link-color;
+    font-weight: 600;
+  }
+  
+  // Style paragraphs that likely contain tech stack info
+  ul + p,
+  ol + p {
     margin-top: 0.8em;
     margin-bottom: 1em;
     padding: 0.6em 1em;
@@ -590,11 +598,6 @@ h4 {
     border-left: 3px solid $link-color;
     border-radius: 4px;
     font-size: 0.95em;
-    
-    strong {
-      color: $link-color;
-      font-weight: 600;
-    }
   }
   
   // Style for h4 (subsections like "Key Achievements")
