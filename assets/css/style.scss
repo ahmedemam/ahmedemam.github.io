@@ -388,18 +388,7 @@ h2 {
   text-align: left;
   color: $heading-color;
   font-weight: 500;
-  position: relative;
   padding-left: 0;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background: linear-gradient(90deg, $link-color, transparent);
-  }
 }
 
 h3 {
