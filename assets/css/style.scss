@@ -716,7 +716,7 @@ h4 {
 .cta-button-secondary {
   display: inline-block;
   padding: 0.65em 1.5em;
-  background: transparent;
+  background: rgba(100, 181, 246, 0.08);
   color: $link-color;
   text-decoration: none;
   border-radius: 5px;
@@ -725,29 +725,11 @@ h4 {
   transition: all 0.8s ease;
   text-align: center;
   min-width: 140px;
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 5px;
-    padding: 1px;
-    background: linear-gradient(135deg, $link-color, rgba(100, 181, 246, 0.5));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0.3;
-    transition: opacity 0.8s ease;
-  }
 
   &:hover {
+    background: rgba(100, 181, 246, 0.15);
     color: #7ec3f6;
     transform: translateY(-2px);
-
-    &::before {
-      opacity: 0.6;
-    }
   }
 
   &:focus {
