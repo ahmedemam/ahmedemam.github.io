@@ -89,24 +89,7 @@ body {
   font-weight: 400;
   transition: all 0.8s ease;
   font-family: $heading-font;
-  border-bottom: 1px solid rgba(100, 181, 246, 0.1);
   position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, $link-color, transparent);
-    transition: width 0.8s ease;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
 
   a {
     color: $link-color;
@@ -550,7 +533,6 @@ h4 {
     margin-top: -0.15em;
     margin-bottom: 0.25em;
     padding: 0.2em 0;
-    border-bottom: 1px solid rgba(100, 181, 246, 0.1);
     transition: all 0.8s ease;
   }
   
@@ -602,7 +584,6 @@ h4 {
     margin-bottom: 0.4em;
     padding: 0.4em 0.8em;
     background: rgba(100, 181, 246, 0.05);
-    border-left: 3px solid $link-color;
     border-radius: 4px;
     font-size: 0.85em;
     transition: all 0.8s ease;
@@ -638,12 +619,10 @@ h4 {
   
   // Style for horizontal rules (dividers)
   hr {
-    display: block;
-    margin: 0.8em 0;
+    display: none;
+    margin: 0;
     border: none;
-    border-top: 1px solid rgba(100, 181, 246, 0.2);
-    height: 1px;
-    transition: all 0.8s ease;
+    height: 0;
   }
 }
 
@@ -684,13 +663,11 @@ h4 {
   padding: 0.9em 1.2em;
   text-align: center;
   background: rgba(100, 181, 246, 0.05);
-  border: 1px solid rgba(100, 181, 246, 0.2);
   border-radius: 6px;
   transition: all 0.8s ease;
 
   &:hover {
     background: rgba(100, 181, 246, 0.08);
-    border-color: rgba(100, 181, 246, 0.3);
   }
 
   p {
@@ -709,11 +686,9 @@ h4 {
     font-weight: 500;
     font-size: 0.9em;
     transition: all 0.8s ease;
-    border: 1px solid $link-color;
 
     &:hover {
       background: #7ec3f6;
-      border-color: #7ec3f6;
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(100, 181, 246, 0.3);
     }
@@ -733,17 +708,6 @@ h4 {
   animation: fadeInUp 0.8s ease-out;
   position: relative;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, $link-color, transparent);
-    opacity: 0.5;
-  }
 
   h1 {
     font-size: 2.6em;
@@ -833,7 +797,6 @@ h4 {
       color: $heading-color;
       transition: all 0.8s ease;
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(100, 181, 246, 0.15);
       border-radius: 6px;
       position: relative;
       overflow: hidden;
@@ -881,7 +844,6 @@ h4 {
       &:hover {
         opacity: 1;
         transform: translateX(3px);
-        border-color: rgba(100, 181, 246, 0.35);
         background: rgba(255, 255, 255, 0.05);
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 
