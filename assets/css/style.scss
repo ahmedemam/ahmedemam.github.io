@@ -58,7 +58,7 @@ html {
 
 /* Enhanced body styling */
 body {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   text-align: left;
   transition: all 0.3s ease;
@@ -85,7 +85,7 @@ body {
   text-align: center;
   margin: 0 0 0.3em 0;
   padding: 0.3em 0;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 400;
   transition: all 0.8s ease;
   font-family: $heading-font;
@@ -181,7 +181,7 @@ body {
   color: #fff;
   border: none;
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   z-index: 1000;
   opacity: 0.8;
@@ -344,7 +344,7 @@ a:focus {
 }
 
 .content {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   max-width: 100%;
   text-align: left;
@@ -390,12 +390,12 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.2em;
   margin-top: 0;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 1.6em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding-bottom: 0.2em;
@@ -420,7 +420,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.25em;
   margin-top: 0.5em;
   margin-bottom: 0.2em;
   text-align: left;
@@ -446,7 +446,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-top: 0.4em;
   margin-bottom: 0.2em;
   text-align: left;
@@ -457,7 +457,7 @@ p {
   line-height: 1.5;
   text-align: left;
   transition: all 0.8s ease;
-  font-size: 1.05em;
+  font-size: 0.95em;
   color: rgba(224, 224, 224, 0.9);
 }
 
@@ -546,7 +546,7 @@ h4 {
   h3 + p:first-of-type {
     font-style: italic;
     color: rgba(224, 224, 224, 0.7);
-    font-size: 0.95em;
+    font-size: 0.85em;
     margin-top: -0.15em;
     margin-bottom: 0.25em;
     padding: 0.2em 0;
@@ -604,13 +604,13 @@ h4 {
     background: rgba(100, 181, 246, 0.05);
     border-left: 3px solid $link-color;
     border-radius: 4px;
-    font-size: 0.95em;
+    font-size: 0.85em;
     transition: all 0.8s ease;
   }
   
   // Style for h4 (subsections like "Key Achievements")
   h4 {
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 600;
     margin-top: 0.4em;
     margin-bottom: 0.25em;
@@ -695,7 +695,7 @@ h4 {
 
   p {
     margin: 0 0 0.4em 0;
-    font-size: 1.05em;
+    font-size: 0.95em;
     color: rgba(224, 224, 224, 0.9);
   }
 
@@ -707,7 +707,7 @@ h4 {
     text-decoration: none;
     border-radius: 4px;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 0.9em;
     transition: all 0.8s ease;
     border: 1px solid $link-color;
 
@@ -746,7 +746,7 @@ h4 {
   }
 
   h1 {
-    font-size: 3em;
+    font-size: 2.6em;
     font-weight: 400;
     margin-bottom: 0.15em;
     transition: all 0.8s ease;
@@ -769,10 +769,10 @@ h4 {
       line-height: 1.5;
       margin: 0.15em 0;
       transition: all 0.8s ease;
-      font-size: 1.05em;
+      font-size: 0.95em;
 
       &:first-of-type {
-        font-size: 1.15em;
+        font-size: 1.05em;
         color: rgba(224, 224, 224, 0.9);
         margin-bottom: 0.2em;
       }
@@ -858,12 +858,12 @@ h4 {
         opacity: 0;
         transition: all 0.8s ease;
         color: $link-color;
-        font-size: 1.2em;
+        font-size: 1.1em;
       }
 
       .project-name {
         font-weight: 600;
-        font-size: 1.1em;
+        font-size: 1em;
         color: $heading-color;
         margin-bottom: 0.15em;
         display: block;
@@ -871,7 +871,7 @@ h4 {
       }
 
       .project-desc {
-        font-size: 0.9em;
+        font-size: 0.85em;
         color: rgba(224, 224, 224, 0.7);
         line-height: 1.4;
         display: block;
@@ -1046,7 +1046,7 @@ article,
   }
 
   .site-nav {
-    font-size: 0.95em;
+    font-size: 0.9em;
     margin-bottom: 0.6em;
     padding: 0.4em 0;
 
@@ -1057,13 +1057,13 @@ article,
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.35em;
     margin-top: 0.8em;
   }
 
   .texts .text-title a {
     padding: 0.6em 0.9em;
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   p {
