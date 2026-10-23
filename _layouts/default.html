@@ -30,7 +30,7 @@
     </footer>
     {% endunless %}
 
-    <dialog class="resume" id="resume-dialog" aria-labelledby="rtitle" data-endpoint="{{ site.resume_endpoint }}" data-to="{{ site.author.email }}">
+    <dialog class="resume" id="resume-dialog" aria-labelledby="rtitle" data-service="{{ site.emailjs.service_id }}" data-template="{{ site.emailjs.template_id }}" data-key="{{ site.emailjs.public_key }}" data-to="{{ site.author.email }}">
       <button type="button" class="resume-close" data-resume-close aria-label="Close">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
       </button>

@@ -6,7 +6,9 @@
   var done = document.getElementById('resume-done');
   var doneMsg = document.getElementById('resume-done-msg');
   var err = document.getElementById('resume-err');
-  var endpoint = dialog.getAttribute('data-endpoint');
+  var service = dialog.getAttribute('data-service');
+  var template = dialog.getAttribute('data-template');
+  var key = dialog.getAttribute('data-key');
   var to = dialog.getAttribute('data-to');
 
   function reset() {
@@ -48,11 +50,23 @@
     if (!role) return fail('Let me know who you are.');
     err.hidden = true;
 
-    if (endpoint) {
-      fetch(endpoint, {
+    if (form.website.value) return success('Thanks.'); // honeypot
+
+    if (service && template && key) {
+      fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ email: email, role: role, company: company, website: form.website.value })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          service_id: service,
+          template_id: template,
+          user_id: key,
+          template_params: {
+            from_email: email,
+            role: role,
+            company: company || 'Not provided',
+            received: new Date().toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' })
+          }
+        })
       }).then(function (r) {
         if (!r.ok) throw new Error(r.status);
         success("Thanks. I review each request personally and will email my résumé to " + email + " shortly. If you'd like to talk sooner, book a call anytime.");

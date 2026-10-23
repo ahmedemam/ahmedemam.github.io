@@ -8,8 +8,11 @@ url:                 'https://ahmedemam.github.io'
 baseurl:             '/'
 logo:               '/assets/logo.png'
 
-# Résumé request form: POST endpoint, e.g. https://YOUR-HOST/resume-request (see mail-server/). Empty = falls back to a pre-filled email.
-resume_endpoint:     ''
+# Résumé request emails via EmailJS (see emailjs/README.md). Any value empty = falls back to a pre-filled email.
+emailjs:
+  service_id:   ''
+  template_id:  ''
+  public_key:   ''
 
 # About/contact
 author:
@@ -47,8 +50,7 @@ kramdown:
 
 # Exclusions from the final site
 exclude:
-  - mail-server
-  - render.yaml
+  - emailjs
   - about.md
   - contact.md
   - projects.md

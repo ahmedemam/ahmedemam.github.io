@@ -4,5 +4,3 @@ _site
 .jekyll-metadata
 vendor
 
-mail-server/node_modules
-mail-server/.env
