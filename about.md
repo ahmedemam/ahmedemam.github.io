@@ -5,7 +5,7 @@ title: About
 
 ## About Me
 
-I am **Ahmed Emam**, a **Founder & Staff Software Development Engineer**, entrepreneur, and community builder with over **7+ years** of experience building scalable platforms, leading engineering teams, and shipping products end-to-end across AI, mobile, and cloud. I combine deep hands-on engineering with strategic product leadership to turn ideas into real, high-impact systems.
+I am **Ahmed Emam**, a **Founder & Staff Software Development Engineer**, entrepreneur, and community builder with over **10+ years** of experience building scalable platforms, leading engineering teams, and shipping products end-to-end across AI, mobile, and cloud. I combine deep hands-on engineering with strategic product leadership to turn ideas into real, high-impact systems.
 
 ---
 
