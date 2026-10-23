@@ -51,6 +51,7 @@ exclude:
   - about.md
   - contact.md
   - projects.md
+  - resume.md
   - optional
   - vendor
   - ed..gemspec
