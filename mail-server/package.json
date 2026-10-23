@@ -1,0 +1,10 @@
+{
+  "name": "ahmedemam-mail-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Receives résumé requests from ahmedemam.github.io and sends the notification and confirmation emails.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "nodemailer": "^6.9.16" }
+}

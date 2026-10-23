@@ -8,7 +8,7 @@ url:                 'https://ahmedemam.github.io'
 baseurl:             '/'
 logo:               '/assets/logo.png'
 
-# Résumé request form: POST endpoint (e.g. a Formspree URL). Empty = falls back to a pre-filled email.
+# Résumé request form: POST endpoint, e.g. https://YOUR-HOST/resume-request (see mail-server/). Empty = falls back to a pre-filled email.
 resume_endpoint:     ''
 
 # About/contact
@@ -47,6 +47,7 @@ kramdown:
 
 # Exclusions from the final site
 exclude:
+  - mail-server
   - about.md
   - contact.md
   - projects.md

@@ -52,7 +52,7 @@
       fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ email: email, role: role, company: company, _subject: 'Résumé request from ' + email })
+        body: JSON.stringify({ email: email, role: role, company: company, website: form.website.value })
       }).then(function (r) {
         if (!r.ok) throw new Error(r.status);
         success("I'll send my résumé to " + email + ". Check your inbox, and if you'd like to talk, book a call anytime.");
