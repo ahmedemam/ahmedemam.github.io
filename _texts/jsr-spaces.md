@@ -8,7 +8,7 @@ source: Ahmed Emam
 
 ### **About JSR Spaces**  
 
-**JSR Spaces** is a dynamic coworking and business hub designed to empower professionals, entrepreneurs, and teams to achieve their goals in a collaborative and inspiring environment. We provide more than just office space — we create communities where ideas flourish, partnerships are formed, and productivity soars.  
+**JSR Spaces** is a dynamic coworking and business hub designed to empower professionals, entrepreneurs, and teams to achieve their goals in a collaborative and inspiring environment. We provide more than just office space, we create communities where ideas flourish, partnerships are formed, and productivity soars.  
 
 ### **Our Mission**  
 To foster a vibrant workspace culture that promotes growth, creativity, and connection for professionals and businesses of all sizes.  

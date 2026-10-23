@@ -1,14 +1,12 @@
 // Service Worker for PWA
-const CACHE_NAME = 'ahmedemam-portfolio-v1';
+const CACHE_NAME = 'ahmedemam-portfolio-v4';
 const urlsToCache = [
   '/',
   '/resume/',
-  '/about/',
-  '/projects/',
-  '/contact/',
   '/assets/css/style.css',
-  '/assets/js/search.js',
-  '/assets/js/elasticlunr.min.js'
+  '/assets/js/globe.js',
+  '/assets/js/resume.js',
+  '/assets/data/land.json'
 ];
 
 // Install event - cache resources

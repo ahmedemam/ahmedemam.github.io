@@ -67,4 +67,4 @@ Plus several internal tools for operations, automation, and productivity.
 Visit us at: [www.masteryhub-its.com](https://www.masteryhub-its.com/)  
 Contact us at: [contact@masteryhub-its.com](mailto:contact@masteryhub-its.com)  
 
-MasteryHub ITS is more than a software house — it's a partner in innovation, helping businesses turn ideas into reality, training the next generation of engineers, and creating opportunities that make a meaningful impact.  
+MasteryHub ITS is more than a software house, it's a partner in innovation, helping businesses turn ideas into reality, training the next generation of engineers, and creating opportunities that make a meaningful impact.  

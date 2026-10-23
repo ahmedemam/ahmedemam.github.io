@@ -3,407 +3,87 @@
 
   {% include head.html %}
 
-  <body class="theme-base-{{site.color-scheme}}">
+  <body class="{{ page.body_class }}">
 
-    <!-- This if statement decides which sidebar to use -->
-    {% if page.toc %}
-    {% include sidebar-toc.html %}
-    {% else %}
-    {% include sidebar.html %}
-    {% endif %}
+    <header class="topbar r1">
+      <a class="brand" href="/" aria-label="Ahmed Emam, home">Ahmed<span class="dot">.</span>Emam</a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a class="nav-extra" href="https://github.com/ahmedemam" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="nav-extra" href="https://www.linkedin.com/in/ahmedemam11/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button type="button" data-resume-open>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>Résumé
+        </button>
+        <a class="btn btn-primary" href="https://calendly.com/ahmedemam01/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+      </nav>
+    </header>
 
-    <!--
-      Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS
-      collisions with our real content.
-    -->
-    <div class="wrap">
-      <button class="sidebar-toggle"
-          aria-label="Open navigation menu"
-          aria-expanded="false"
-          aria-controls="sidebar">
+    {{ content }}
+
+    {% unless page.body_class == 'home' %}
+    <footer class="footer">
+      <span>© {{ site.time | date: "%Y" }} Ahmed Emam · Cairo</span>
+      <span>
+        <a href="mailto:{{ site.author.email }}">Email</a> ·
+        <a href="https://www.linkedin.com/in/ahmedemam11/" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+        <a href="https://github.com/ahmedemam" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </span>
+    </footer>
+    {% endunless %}
+
+    <dialog class="resume" id="resume-dialog" aria-labelledby="rtitle" data-endpoint="{{ site.resume_endpoint }}" data-to="{{ site.author.email }}">
+      <button type="button" class="resume-close" data-resume-close aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
       </button>
-      <header class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <!-- logo -->
-              <img src="{{ site.logo }}" alt="{{ site.title }}" width="200px" height="200px" style="margin: 0 auto">
-      <a href="{{ site.baseurl }}/" title="Home" aria-label="Home">{{ site.title | newline_to_br }}</a>
-      <br><small>{{ site.tagline }}</small>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" style="background: none; border: none; cursor: pointer; display: block; margin: 10px auto; padding: 5px;">
-        <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; color: var(--link-color);">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none; color: var(--link-color);">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
-          </h3>
+
+      <form class="resume-form" id="resume-form" novalidate>
+        <div class="resume-head">
+          <span class="eyebrow" style="color: var(--accent)">Résumé</span>
+          <h2 id="rtitle">Get my résumé in your inbox</h2>
+          <p>Tell me where to send it and who you are. It'll arrive shortly.</p>
         </div>
-      </header>
-
-      <main class="container content" id="main" role="main">
-        <nav class="site-nav" role="navigation" aria-label="Main navigation">
-          <a href="{{ site.baseurl }}/" aria-label="Home page">Home</a> | 
-          <a href="{{ site.baseurl }}/resume/" aria-label="Resume page">Resume</a> | 
-          <a href="{{ site.baseurl }}/about/" aria-label="About page">About</a> | 
-          <a href="{{ site.baseurl }}/projects/" aria-label="Projects page">Projects</a> | 
-          <a href="{{ site.baseurl }}/contact/" aria-label="Contact page">Contact</a>
-        </nav>
-        <div id="loading-indicator" class="loading-indicator" style="display: none;">
-          <div class="loading-spinner"></div>
+        <div class="field">
+          <label for="remail">Email</label>
+          <input id="remail" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
         </div>
-        {{ content }}
-      </main>
-      
-      <!-- Scroll to top button -->
-      <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" style="display: none;">
-        ↑
-      </button>
-    </div>
+        <fieldset class="field">
+          <legend>Who are you?</legend>
+          <div class="chips">
+            <label><input type="radio" name="role" value="Recruiter"><span>Recruiter</span></label>
+            <label><input type="radio" name="role" value="Founder"><span>Founder</span></label>
+            <label><input type="radio" name="role" value="Investor"><span>Investor</span></label>
+            <label><input type="radio" name="role" value="Engineer"><span>Engineer</span></label>
+            <label><input type="radio" name="role" value="Other"><span>Other</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="rorg">Company <span class="opt">(optional)</span></label>
+          <input id="rorg" name="company" type="text" autocomplete="organization" placeholder="Where you work">
+        </div>
+        <p class="resume-err" id="resume-err" role="alert" hidden></p>
+        <button type="submit" class="btn btn-primary resume-submit">Send me the résumé
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </button>
+        <p class="resume-note">No spam. Your email is only used to send this.</p>
+      </form>
 
-    <script>
+      <div class="resume-done" id="resume-done" hidden>
+        <span class="check"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></span>
+        <h2>Request received.</h2>
+        <p id="resume-done-msg"></p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://calendly.com/ahmedemam01/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+          <button type="button" class="btn btn-ghost" data-resume-close>Close</button>
+        </div>
+      </div>
+    </dialog>
 
-    // Highlight search Query
-    var url = window.location.href;
-      if (url.lastIndexOf("?q=") > 0) {
-        // get the index of the parameter, add three (to account for length)
-        var stringloc = url.lastIndexOf("?q=") + 3;
-        // get the substring (query) and decode
-        var searchquery = decodeURIComponent(url.substr(stringloc));
-        // regex matches at beginning of line, end of line or word boundary, useful for poetry
-        var regex = new RegExp("(?:^|\\b)(" + searchquery + ")(?:$|\\b)", "gim");
-        // get, add mark and then set content
-        var content = document.getElementById("main").innerHTML;
-        document.getElementById("main").innerHTML = content.replace(regex, "<mark>$1</mark>");
-      }
-
-      // Support sidebar toggle
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var sidebarNavLink = document.querySelector('.sidebar-nav-item');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-
-        // Toggle sidebar
-        toggle.addEventListener('click', function(e) {
-          e.preventDefault();
-
-          checkbox.checked = !checkbox.checked;
-          toggle.setAttribute('aria-expanded', checkbox.checked);
-          sidebar.setAttribute('aria-hidden', !checkbox.checked);
-        });
-
-        // Make sure we focus on the menu once it opens to aid tab navigation
-        sidebar.addEventListener('transitionend', function() {sidebarNavLink.focus()});
-
-        // Clicking anywhere in the sidebar should close the menu
-        sidebar.addEventListener('click', function(e) {
-          checkbox.checked = false;
-          toggle.setAttribute('aria-expanded', false);
-          sidebar.setAttribute('aria-hidden', true);
-        })
-
-      })(document);
-    </script>
-
-    <!-- AJAX Navigation for Internal Links -->
-    <script>
-      (function() {
-        // Get base URL
-        var baseUrl = '{{ site.baseurl }}' || '';
-        var siteUrl = '{{ site.url }}' || window.location.origin;
-        
-        // Function to check if link is external
-        function isExternalLink(url) {
-          if (!url || url === '#' || url.startsWith('mailto:') || url.startsWith('javascript:')) {
-            return false;
-          }
-          // External domains that should open in new tabs
-          var externalDomains = [
-            'cremeglobal.com',
-            'masteryhub-its.com',
-            'jsrspaces.com',
-            'wepray.us',
-            'speakout.icu',
-            'squadxcamp.com',
-            'linkedin.com',
-            'github.com',
-            'food.jumia.com.eg',
-            'cloudypedia.com',
-            'beyond-solution.com',
-            'orange.com'
-          ];
-          
-          // Check if URL contains any external domain
-          for (var i = 0; i < externalDomains.length; i++) {
-            if (url.indexOf(externalDomains[i]) !== -1) {
-              return true;
-            }
-          }
-          
-          // Check if it's an absolute URL to a different domain
-          if (url.startsWith('http://') || url.startsWith('https://')) {
-            try {
-              var linkHost = new URL(url).hostname;
-              var currentHost = window.location.hostname;
-              return linkHost !== currentHost && linkHost !== 'ahmedemam.github.io';
-            } catch(e) {
-              return true;
-            }
-          }
-          
-          return false;
-        }
-        
-        // Function to check if link is internal
-        function isInternalLink(url) {
-          if (!url || url === '#' || url.startsWith('mailto:') || url.startsWith('javascript:')) {
-            return false;
-          }
-          
-          // If it's an external link, it's not internal
-          if (isExternalLink(url)) {
-            return false;
-          }
-          
-          // Internal links: relative paths or same domain
-          if (url.startsWith('/') || url.startsWith('./') || url.startsWith('../')) {
-            return true;
-          }
-          
-          // Check if it's same domain
-          try {
-            var linkUrl = new URL(url, window.location.href);
-            return linkUrl.hostname === window.location.hostname || 
-                   linkUrl.hostname === 'ahmedemam.github.io';
-          } catch(e) {
-            // If URL parsing fails, assume it's relative/internal
-            return !url.startsWith('http://') && !url.startsWith('https://');
-          }
-        }
-        
-        // Function to load page content via AJAX
-        function loadPage(url) {
-          // Update URL without reload
-          if (window.history && window.history.pushState) {
-            window.history.pushState({path: url}, '', url);
-          }
-          
-          // Show loading indicator
-          var loadingIndicator = document.getElementById('loading-indicator');
-          if (loadingIndicator) {
-            loadingIndicator.style.display = 'block';
-          }
-          
-          // Show loading state
-          var main = document.getElementById('main');
-          if (main) {
-            main.style.opacity = '0.5';
-            main.style.transition = 'opacity 0.3s ease';
-          }
-          
-          // Fetch the page
-          fetch(url)
-            .then(function(response) {
-              return response.text();
-            })
-            .then(function(html) {
-              // Parse the HTML
-              var parser = new DOMParser();
-              var doc = parser.parseFromString(html, 'text/html');
-              
-              // Extract the main content
-              var newMain = doc.getElementById('main');
-              if (newMain && main) {
-                // Update content
-                main.innerHTML = newMain.innerHTML;
-                
-                // Update page title
-                var newTitle = doc.querySelector('title');
-                if (newTitle) {
-                  document.title = newTitle.textContent;
-                }
-                
-                // Hide loading indicator
-                if (loadingIndicator) {
-                  loadingIndicator.style.display = 'none';
-                }
-                
-                // Fade in
-                main.style.opacity = '1';
-                
-                // Scroll to top
-                window.scrollTo(0, 0);
-                
-                // Re-initialize any scripts if needed
-                if (typeof window.umami !== 'undefined') {
-                  window.umami.trackView();
-                }
-              }
-            })
-            .catch(function(error) {
-              console.error('Error loading page:', error);
-              // Hide loading indicator
-              if (loadingIndicator) {
-                loadingIndicator.style.display = 'none';
-              }
-              // Fallback to normal navigation
-              window.location.href = url;
-            });
-        }
-        
-        // Handle popstate (back/forward buttons)
-        window.addEventListener('popstate', function(event) {
-          if (event.state && event.state.path) {
-            loadPage(event.state.path);
-          } else {
-            window.location.reload();
-          }
-        });
-        
-        // Intercept link clicks
-        document.addEventListener('click', function(e) {
-          var link = e.target.closest('a');
-          if (!link) return;
-          
-          var href = link.getAttribute('href');
-          if (!href) return;
-          
-          // Skip if it has target="_blank" or is external
-          if (link.getAttribute('target') === '_blank' || isExternalLink(href)) {
-            return; // Let it open normally
-          }
-          
-          // Skip if it's a mailto or javascript link
-          if (href.startsWith('mailto:') || href.startsWith('javascript:')) {
-            return;
-          }
-          
-          // Check if it's an internal link
-          if (isInternalLink(href)) {
-            e.preventDefault();
-            
-            // Convert relative URL to absolute
-            var absoluteUrl = href;
-            if (href.startsWith('/')) {
-              absoluteUrl = window.location.origin + href;
-            } else if (!href.startsWith('http://') && !href.startsWith('https://')) {
-              absoluteUrl = new URL(href, window.location.href).href;
-            }
-            
-            loadPage(absoluteUrl);
-          }
-        });
-      })();
-    </script>
-
-    <!-- Scroll to Top Button -->
-    <script>
-      (function() {
-        var scrollButton = document.getElementById('scroll-to-top');
-        if (!scrollButton) return;
-        
-        // Show/hide button based on scroll position
-        function toggleScrollButton() {
-          if (window.pageYOffset > 300) {
-            scrollButton.style.display = 'block';
-          } else {
-            scrollButton.style.display = 'none';
-          }
-        }
-        
-        // Scroll to top on click
-        scrollButton.addEventListener('click', function() {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        });
-        
-        // Show/hide on scroll
-        window.addEventListener('scroll', toggleScrollButton);
-        toggleScrollButton(); // Check initial state
-      })();
-    </script>
-
-    <!-- Service Worker Registration -->
+    <script src="/assets/js/resume.js" defer></script>
     <script>
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('{{ site.baseurl }}/sw.js')
-            .then(function(registration) {
-              console.log('ServiceWorker registration successful');
-            })
-            .catch(function(err) {
-              console.log('ServiceWorker registration failed');
-            });
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
         });
       }
     </script>
-
-<!-- Facebook SDK for JavaScript -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '589495744558280',
-      xfbml      : true,
-      version    : 'v2.6'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<script>
-  (function() {
-    const toggleBtn = document.getElementById('theme-toggle');
-    const lightIcon = document.getElementById('theme-icon-light');
-    const darkIcon = document.getElementById('theme-icon-dark');
-    const html = document.documentElement;
-
-    // Check preference - Default to Dark
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-
-    if (currentTheme === 'dark') {
-      html.setAttribute('data-theme', 'dark');
-      lightIcon.style.display = 'none';
-      if (darkIcon) darkIcon.style.display = 'block';
-    } else {
-      // Light mode when explicitly selected
-      lightIcon.style.display = 'block';
-      if (darkIcon) darkIcon.style.display = 'none';
-    }
-
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', function() {
-        if (html.getAttribute('data-theme') === 'dark') {
-          html.removeAttribute('data-theme');
-          localStorage.setItem('theme', 'light');
-          lightIcon.style.display = 'block';
-          if (darkIcon) darkIcon.style.display = 'none';
-        } else {
-          html.setAttribute('data-theme', 'dark');
-          localStorage.setItem('theme', 'dark');
-          lightIcon.style.display = 'none';
-          if (darkIcon) darkIcon.style.display = 'block';
-        }
-      });
-    }
-  })();
-</script>
   </body>
 </html>
