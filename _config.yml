@@ -48,6 +48,7 @@ kramdown:
 # Exclusions from the final site
 exclude:
   - mail-server
+  - render.yaml
   - about.md
   - contact.md
   - projects.md

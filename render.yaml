@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: ahmedemam-mail-server
+    runtime: node
+    plan: free
+    rootDir: mail-server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "465"
+      - key: SMTP_USER
+        value: ahmedabdelazizemam@gmail.com
+      - key: SMTP_PASS
+        sync: false
+      - key: MAIL_FROM
+        value: Ahmed Emam <ahmedabdelazizemam@gmail.com>
+      - key: NOTIFY_TO
+        value: ahmedabdelazizemam@gmail.com,ahmed.emam@masteryhub-its.com
+      - key: ALLOWED_ORIGINS
+        value: https://ahmedemam.github.io
