@@ -10,9 +10,9 @@ logo:               '/assets/logo.png'
 
 # Résumé request emails via EmailJS (see emailjs/README.md). Any value empty = falls back to a pre-filled email.
 emailjs:
-  service_id:   ''
-  template_id:  ''
-  public_key:   ''
+  service_id:   'service_1rh24jc'
+  template_id:  'template_tow1hrh'
+  public_key:   'yrXpS2PVwffnYyX_w'
 
 # About/contact
 author:
