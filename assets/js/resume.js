@@ -55,7 +55,7 @@
         body: JSON.stringify({ email: email, role: role, company: company, website: form.website.value })
       }).then(function (r) {
         if (!r.ok) throw new Error(r.status);
-        success("I'll send my résumé to " + email + ". Check your inbox, and if you'd like to talk, book a call anytime.");
+        success("Thanks. I review each request personally and will email my résumé to " + email + " shortly. If you'd like to talk sooner, book a call anytime.");
         form.reset();
       }).catch(function () {
         fail('Something went wrong. Please try again, or email me directly.');

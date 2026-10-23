@@ -1,13 +1,11 @@
 const http = require('http');
 const nodemailer = require('nodemailer');
-const { notification, confirmation } = require('./templates');
+const { notification } = require('./templates');
 
 const env = process.env;
 const PORT = env.PORT || 8787;
 const NOTIFY_TO = (env.NOTIFY_TO || 'ahmedabdelazizemam@gmail.com,ahmed.emam@masteryhub-its.com').split(',').map((s) => s.trim());
 const ALLOWED_ORIGINS = (env.ALLOWED_ORIGINS || 'https://ahmedemam.github.io').split(',').map((s) => s.trim());
-const RESUME_URL = env.RESUME_URL || 'https://ahmedemam.github.io/downloads/ahmed-abd-elaziz-emam-resume.pdf';
-const CALENDLY_URL = env.CALENDLY_URL || 'https://calendly.com/ahmedemam01/30min';
 const FROM = env.MAIL_FROM || `Ahmed Emam <${env.SMTP_USER}>`;
 const ROLES = ['Recruiter', 'Founder', 'Investor', 'Engineer', 'Other'];
 const DRY_RUN = env.MAIL_DRY_RUN === '1';
@@ -84,12 +82,9 @@ http.createServer(async (req, res) => {
 
   try {
     const n = notification({ email, role, company, when });
-    const c = confirmation({ resumeUrl: RESUME_URL, calendlyUrl: CALENDLY_URL });
-    const results = await Promise.all([
-      transport.sendMail({ from: FROM, to: NOTIFY_TO, replyTo: email, ...n }),
-      transport.sendMail({ from: FROM, to: email, replyTo: NOTIFY_TO[0], ...c })
-    ]);
-    if (DRY_RUN) console.log(results.map((r) => r.message.slice(0, 200)).join('\n---\n'));
+    // Owner is notified only. The résumé is sent manually after vetting the requester.
+    const result = await transport.sendMail({ from: FROM, to: NOTIFY_TO, replyTo: email, ...n });
+    if (DRY_RUN) console.log(result.message.slice(0, 200));
     send(res, 200, { ok: true }, origin);
   } catch (e) {
     console.error('mail failed:', e.message);

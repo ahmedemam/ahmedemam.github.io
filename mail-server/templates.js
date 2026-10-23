@@ -46,27 +46,11 @@ function notification({ email, role, company, when }) {
       </table>
     </td></tr>
     <tr><td style="padding:20px 32px 28px;">
-      <a href="mailto:${esc(email)}?subject=${encodeURIComponent('Following up on my résumé')}" style="display:inline-block;padding:13px 22px;border-radius:3px;background:${ACCENT};color:${INK};font-size:14px;font-weight:600;text-decoration:none;">Reply to ${esc(email)}</a>
-      <p style="margin:16px 0 0;font-size:13px;line-height:1.5;color:#8f8f8f;">They already received the résumé link automatically.</p>
+      <a href="mailto:${esc(email)}?subject=${encodeURIComponent('Following up on my résumé')}" style="display:inline-block;padding:13px 22px;border-radius:3px;background:${ACCENT};color:${INK};font-size:14px;font-weight:600;text-decoration:none;">Review &amp; reply to ${esc(email)}</a>
+      <p style="margin:16px 0 0;font-size:13px;line-height:1.5;color:#8f8f8f;">Nothing has been sent to them. Check who they are first, then reply to send your résumé yourself.</p>
     </td></tr>`);
-  const text = `New résumé request\n\nEmail: ${email}\nRole: ${role}\nCompany: ${company || 'Not provided'}\nReceived: ${when}\n`;
+  const text = `New résumé request\n\nEmail: ${email}\nRole: ${role}\nCompany: ${company || 'Not provided'}\nReceived: ${when}\n\nNothing has been sent to them. Check who they are, then reply to send your résumé manually.\n`;
   return { subject, html, text };
 }
 
-function confirmation({ resumeUrl, calendlyUrl }) {
-  const subject = 'My résumé, as requested';
-  const html = shell('Here is my résumé. Thanks for reaching out.', `
-    <tr><td style="padding:28px 32px 8px;">
-      <div style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.1em;color:${ACCENT};">RÉSUMÉ</div>
-      <h1 style="margin:8px 0 0;font-size:26px;line-height:1.2;font-weight:500;letter-spacing:-0.03em;color:#fafafa;">Thanks for reaching out.</h1>
-      <p style="margin:14px 0 0;font-size:15px;line-height:1.6;color:#b5b5b5;">Here is my résumé. If anything stands out, or you would like to talk, I would be glad to hear from you.</p>
-    </td></tr>
-    <tr><td style="padding:20px 32px 28px;">
-      <a href="${esc(resumeUrl)}" style="display:inline-block;padding:13px 22px;border-radius:3px;background:${ACCENT};color:${INK};font-size:14px;font-weight:600;text-decoration:none;">Download résumé (PDF)</a>
-      <a href="${esc(calendlyUrl)}" style="display:inline-block;margin-left:8px;padding:12px 22px;border-radius:3px;border:1px solid #3a3a3a;color:#fafafa;font-size:14px;font-weight:500;text-decoration:none;">Book a 30-min call</a>
-    </td></tr>`);
-  const text = `Thanks for reaching out.\n\nHere is my résumé: ${resumeUrl}\n\nBook a call: ${calendlyUrl}\n\nAhmed Emam\n`;
-  return { subject, html, text };
-}
-
-module.exports = { notification, confirmation };
+module.exports = { notification };
