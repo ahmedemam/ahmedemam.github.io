@@ -18,7 +18,7 @@ emailjs:
 openpanel:
   api_url:    'https://analytics.masteryhub-its.com/api'
   script_url: 'https://analytics.masteryhub-its.com/op1.js'
-  client_id:  ''
+  client_id:  '6fe26f11-f02a-4be1-872e-350393548dea'
 
 # About/contact
 author:
