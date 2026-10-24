@@ -14,6 +14,12 @@ emailjs:
   template_id:  'template_tow1hrh'
   public_key:   'yrXpS2PVwffnYyX_w'
 
+# Self-hosted OpenPanel. Leave client_id empty to disable tracking.
+openpanel:
+  api_url:    'https://analytics.masteryhub-its.com/api'
+  script_url: 'https://analytics.masteryhub-its.com/op1.js'
+  client_id:  ''
+
 # About/contact
 author:
   name:              Ahmed Emam

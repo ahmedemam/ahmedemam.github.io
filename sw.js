@@ -1,5 +1,5 @@
 // Service Worker for PWA
-const CACHE_NAME = 'ahmedemam-portfolio-v5';
+const CACHE_NAME = 'ahmedemam-portfolio-v6';
 const urlsToCache = [
   '/',
   '/assets/css/style.css',
