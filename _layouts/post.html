@@ -2,7 +2,27 @@
 layout: default
 ---
 
-<article class="post">
-  <h1 class="text-title">{{ page.title }}</h1>
-  {{ content }}
-</article>
+<main class="content content-post" id="main">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="/blog/">Blog</a>
+    <span>/</span>
+    <span>{{ page.title }}</span>
+  </nav>
+
+  <article class="page post"{% if page.lang == "ar" %} dir="rtl" lang="ar"{% endif %}>
+    <h1 class="page-title">{{ page.title }}</h1>
+    <p class="post-meta">
+      <time dir="ltr" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      <span dir="ltr">{% include reading-time.html %}</span>
+      {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+    </p>
+    {{ content }}
+
+    <nav class="post-nav" aria-label="More posts">
+      {% if page.previous %}<a class="prev" href="{{ page.previous.url }}"><small>Older</small>{{ page.previous.title }}</a>{% endif %}
+      {% if page.next %}<a class="next" href="{{ page.next.url }}"><small>Newer</small>{{ page.next.title }}</a>{% endif %}
+    </nav>
+  </article>
+</main>

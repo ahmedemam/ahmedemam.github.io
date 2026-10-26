@@ -5,3 +5,15 @@ _site
 vendor
 
 node_modules
+
+# Local draft posts (not published)
+_drafts/
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+mcp.env
+*.pem
+*.key
+credentials*.json

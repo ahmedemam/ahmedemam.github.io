@@ -10,6 +10,11 @@
       <nav class="topnav" aria-label="Main navigation">
         <a class="nav-extra" href="https://github.com/ahmedemam" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a class="nav-extra" href="https://www.linkedin.com/in/ahmedemam11/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="/blog/"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to light mode" title="Switch theme">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+        </button>
         <button type="button" data-resume-open>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>Résumé
         </button>
@@ -23,6 +28,7 @@
     <footer class="footer">
       <span>© {{ site.time | date: "%Y" }} Ahmed Emam · Cairo</span>
       <span>
+        <a href="/blog/">Blog</a> ·
         <a href="mailto:{{ site.author.email }}">Email</a> ·
         <a href="https://www.linkedin.com/in/ahmedemam11/" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
         <a href="https://github.com/ahmedemam" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -37,7 +43,7 @@
 
       <form class="resume-form" id="resume-form" novalidate>
         <div class="resume-head">
-          <span class="eyebrow" style="color: var(--accent)">Résumé</span>
+          <span class="eyebrow" style="color: var(--accent-ink)">Résumé</span>
           <h2 id="rtitle">Get my résumé in your inbox</h2>
           <p>Tell me where to send it and who you are. I review each request and reply personally.</p>
         </div>
@@ -78,6 +84,7 @@
       </div>
     </dialog>
 
+    <script src="/assets/js/theme.js" defer></script>
     <script src="/assets/js/resume.js" defer></script>
     <script>
       if ('serviceWorker' in navigator) {

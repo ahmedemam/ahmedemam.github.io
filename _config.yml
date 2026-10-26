@@ -40,6 +40,16 @@ encoding: utf-8
 collections:
   texts:
     output: true
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 
 # Markdown specs
 markdown: kramdown
@@ -58,6 +68,7 @@ kramdown:
 exclude:
   - emailjs
   - about.md
+  - ENHANCEMENTS.md
   - projects.md
   - optional
   - vendor
